@@ -8,8 +8,7 @@ namespace QL_HocVien
 {
     static class Program
     {
-        public static TrangChu trangchuForm = null;
-        public static DangNhap dnForm = null;
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,9 +18,7 @@ namespace QL_HocVien
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            dnForm = new DangNhap();
-            trangchuForm = new TrangChu();
-            Application.Run(dnForm);
+            Application.Run(new DangNhap());
         }
     }
 }

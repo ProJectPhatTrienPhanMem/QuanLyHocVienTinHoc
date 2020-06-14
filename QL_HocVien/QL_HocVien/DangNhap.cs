@@ -19,7 +19,19 @@ namespace QL_HocVien
 
         private void dangNhap1_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnDN_Click(object sender, EventArgs e)
+        {
+            TrangChu tc = new TrangChu();
+            tc.Show();
+          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
