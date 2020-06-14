@@ -101,6 +101,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DangNhap";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DangNhap_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
