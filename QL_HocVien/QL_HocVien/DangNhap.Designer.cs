@@ -33,11 +33,11 @@
             // 
             // dangNhap1
             // 
-            this.dangNhap1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dangNhap1.Location = new System.Drawing.Point(0, 0);
             this.dangNhap1.Name = "dangNhap1";
-            this.dangNhap1.Size = new System.Drawing.Size(487, 261);
+            this.dangNhap1.Size = new System.Drawing.Size(487, 168);
             this.dangNhap1.TabIndex = 0;
+            this.dangNhap1.Load += new System.EventHandler(this.dangNhap1_Load);
             // 
             // DangNhap
             // 

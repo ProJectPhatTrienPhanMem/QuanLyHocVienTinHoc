@@ -16,5 +16,10 @@ namespace QL_HocVien
         {
             InitializeComponent();
         }
+
+        private void dangNhap1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
