@@ -76,6 +76,7 @@
             this.btnDangNhap.TabIndex = 4;
             this.btnDangNhap.Text = "Login";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnHuy
             // 
