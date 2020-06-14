@@ -1,0 +1,6 @@
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\FormControl\bin\Debug\FormControl.dll
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\FormControl\bin\Debug\FormControl.pdb
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.DangNhap.resources
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.csproj.GenerateResource.Cache
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.dll
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.pdb

@@ -1,0 +1,11 @@
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\QL_HocVien.exe.config
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\QL_HocVien.exe
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\QL_HocVien.pdb
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\FormControl.dll
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\FormControl.pdb
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csprojResolveAssemblyReference.cache
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.DangNhap.resources
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.Properties.Resources.resources
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csproj.GenerateResource.Cache
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.exe
+C:\Users\A\Desktop\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.pdb
