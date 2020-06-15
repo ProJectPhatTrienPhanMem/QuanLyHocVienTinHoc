@@ -16,5 +16,17 @@ namespace QL_HocVien
         {
             InitializeComponent();
         }
+
+        private void thêmHọcSinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HocVien frmHV = new HocVien();
+            frmHV.Show();
+        }
+
+        private void thêmNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThemNguoiDung frmND = new ThemNguoiDung();
+            frmND.Show();
+        }
     }
 }

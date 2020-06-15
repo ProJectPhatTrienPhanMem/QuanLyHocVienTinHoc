@@ -35,5 +35,16 @@ namespace QL_HocVien.Properties {
                 this["QL_HocVienConn"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-UPRR948\\SQLEXPRESS;Initial Catalog=QL_HOCVIEN;User ID=sa;Pass" +
+            "word=sa2012")]
+        public string QL_HOCVIENConnectionString {
+            get {
+                return ((string)(this["QL_HOCVIENConnectionString"]));
+            }
+        }
     }
 }

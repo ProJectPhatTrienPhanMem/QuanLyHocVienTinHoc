@@ -50,9 +50,30 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="DuLieu.cs">
+      <DependentUpon>DuLieu.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DuLieu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuLieu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HocVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HocVien.Designer.cs">
+      <DependentUpon>HocVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QL_NguoiDung.cs" />
+    <Compile Include="ThemNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemNguoiDung.Designer.cs">
+      <DependentUpon>ThemNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +89,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HocVien.resx">
+      <DependentUpon>HocVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,12 +101,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ThemNguoiDung.resx">
+      <DependentUpon>ThemNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XuLyCauHinh.resx">
       <DependentUpon>XuLyCauHinh.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DuLieu.xsc">
+      <DependentUpon>DuLieu.xsd</DependentUpon>
+    </None>
+    <None Include="DuLieu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuLieu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DuLieu.xss">
+      <DependentUpon>DuLieu.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
