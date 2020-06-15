@@ -8,7 +8,8 @@ namespace QL_HocVien
 {
     static class Program
     {
-        
+        public static XuLyCauHinh xulyForm = null;
+        public static TrangChu trangchu = null;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -21,3 +21,4 @@ E:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.DangNhap.resou
 E:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.Properties.Resources.resources
 E:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.TrangChu.resources
 E:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csproj.GenerateResource.Cache
+E:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.XuLyCauHinh.resources

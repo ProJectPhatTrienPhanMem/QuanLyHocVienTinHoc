@@ -12,6 +12,7 @@ namespace QL_HocVien
 {
     public partial class DangNhap : Form
     {
+        QL_NguoiDung CauHinh = new QL_NguoiDung();
         public DangNhap()
         {
             InitializeComponent();
@@ -33,8 +34,51 @@ namespace QL_HocVien
                 this.txtPass.Focus();
                 return;
             }
-            TrangChu tc = new TrangChu();
-            tc.Show();
+            int kq = CauHinh.Check_Config();
+            if (kq == 0)
+                ProcessLogin();
+            if (kq == 1)
+            {
+                MessageBox.Show("Chuoi cau hinh khong ton tai");
+                ProcessConfig();
+            }
+            if (kq == 2)
+            {
+                MessageBox.Show("Chuoi cau hinh khong phu hop");
+                ProcessConfig();
+            }
+        }
+        public void ProcessConfig()
+        {
+            if (Program.xulyForm == null || Program.xulyForm.IsDisposed)
+            {
+                Program.xulyForm = new XuLyCauHinh();
+            }
+            this.Visible = false;
+            Program.xulyForm.Show();
+        }
+
+        public void ProcessLogin()
+        {
+            int result;
+            result = CauHinh.check_User(txtUser.Text, txtPass.Text);
+            //wrong username or password
+            if (result == 9)
+            {
+                MessageBox.Show("Sai" + label1.Text + "Hoặc" + label2.Text);
+                return;
+            }
+            else if (result == 10)
+            {
+                MessageBox.Show("Tài khoản bị khóa");
+                return;
+            }
+            if (Program.trangchu == null || Program.trangchu.IsDisposed)
+            {
+                Program.trangchu = new TrangChu();
+            }
+            this.Visible = false;
+            Program.trangchu.Show();
           
         }
 
