@@ -30,8 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thêmHọcSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thêmHọcSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,19 +54,19 @@
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.hệThốngToolStripMenuItem.Text = "Hệ Thống";
             // 
-            // thêmHọcSinhToolStripMenuItem
-            // 
-            this.thêmHọcSinhToolStripMenuItem.Name = "thêmHọcSinhToolStripMenuItem";
-            this.thêmHọcSinhToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
-            this.thêmHọcSinhToolStripMenuItem.Text = "Thêm Học Sinh";
-            this.thêmHọcSinhToolStripMenuItem.Click += new System.EventHandler(this.thêmHọcSinhToolStripMenuItem_Click);
-            // 
             // thêmNgườiDùngToolStripMenuItem
             // 
             this.thêmNgườiDùngToolStripMenuItem.Name = "thêmNgườiDùngToolStripMenuItem";
             this.thêmNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.thêmNgườiDùngToolStripMenuItem.Text = "Thêm Người Dùng";
             this.thêmNgườiDùngToolStripMenuItem.Click += new System.EventHandler(this.thêmNgườiDùngToolStripMenuItem_Click);
+            // 
+            // thêmHọcSinhToolStripMenuItem
+            // 
+            this.thêmHọcSinhToolStripMenuItem.Name = "thêmHọcSinhToolStripMenuItem";
+            this.thêmHọcSinhToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.thêmHọcSinhToolStripMenuItem.Text = "Thêm Học Sinh";
+            this.thêmHọcSinhToolStripMenuItem.Click += new System.EventHandler(this.thêmHọcSinhToolStripMenuItem_Click);
             // 
             // TrangChu
             // 
@@ -77,6 +77,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TrangChu";
             this.Text = "TrangChu";
+            this.Load += new System.EventHandler(this.TrangChu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
