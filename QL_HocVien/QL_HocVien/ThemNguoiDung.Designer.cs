@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemNguoiDung));
             System.Windows.Forms.Label tenDangNhapLabel;
             System.Windows.Forms.Label matKhauLabel;
             System.Windows.Forms.Label hoatDongLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemNguoiDung));
             this.duLieu = new QL_HocVien.DuLieu();
             this.tAIKHOANBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tAIKHOANTableAdapter = new QL_HocVien.DuLieuTableAdapters.TAIKHOANTableAdapter();
             this.tableAdapterManager = new QL_HocVien.DuLieuTableAdapters.TableAdapterManager();
             this.tAIKHOANBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.tAIKHOANBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.tenDangNhapTextBox = new System.Windows.Forms.TextBox();
+            this.matKhauTextBox = new System.Windows.Forms.TextBox();
+            this.hoatDongCheckBox = new System.Windows.Forms.CheckBox();
             this.tAIKHOANDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tenDangNhapTextBox = new System.Windows.Forms.TextBox();
-            this.matKhauTextBox = new System.Windows.Forms.TextBox();
-            this.hoatDongCheckBox = new System.Windows.Forms.CheckBox();
             tenDangNhapLabel = new System.Windows.Forms.Label();
             matKhauLabel = new System.Windows.Forms.Label();
             hoatDongLabel = new System.Windows.Forms.Label();
@@ -66,6 +66,33 @@
             this.tAIKHOANBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tenDangNhapLabel
+            // 
+            tenDangNhapLabel.AutoSize = true;
+            tenDangNhapLabel.Location = new System.Drawing.Point(12, 37);
+            tenDangNhapLabel.Name = "tenDangNhapLabel";
+            tenDangNhapLabel.Size = new System.Drawing.Size(87, 13);
+            tenDangNhapLabel.TabIndex = 2;
+            tenDangNhapLabel.Text = "Ten Dang Nhap:";
+            // 
+            // matKhauLabel
+            // 
+            matKhauLabel.AutoSize = true;
+            matKhauLabel.Location = new System.Drawing.Point(12, 63);
+            matKhauLabel.Name = "matKhauLabel";
+            matKhauLabel.Size = new System.Drawing.Size(56, 13);
+            matKhauLabel.TabIndex = 4;
+            matKhauLabel.Text = "Mat Khau:";
+            // 
+            // hoatDongLabel
+            // 
+            hoatDongLabel.AutoSize = true;
+            hoatDongLabel.Location = new System.Drawing.Point(12, 91);
+            hoatDongLabel.Name = "hoatDongLabel";
+            hoatDongLabel.Size = new System.Drawing.Size(62, 13);
+            hoatDongLabel.TabIndex = 6;
+            hoatDongLabel.Text = "Hoat Dong:";
             // 
             // duLieu
             // 
@@ -124,6 +151,31 @@
             this.tAIKHOANBindingNavigator.TabIndex = 0;
             this.tAIKHOANBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -156,17 +208,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -174,7 +219,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -183,40 +228,48 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // tAIKHOANBindingNavigatorSaveItem
             // 
             this.tAIKHOANBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tAIKHOANBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tAIKHOANBindingNavigatorSaveItem.Image")));
             this.tAIKHOANBindingNavigatorSaveItem.Name = "tAIKHOANBindingNavigatorSaveItem";
-            this.tAIKHOANBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.tAIKHOANBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.tAIKHOANBindingNavigatorSaveItem.Text = "Save Data";
             this.tAIKHOANBindingNavigatorSaveItem.Click += new System.EventHandler(this.tAIKHOANBindingNavigatorSaveItem_Click);
+            // 
+            // tenDangNhapTextBox
+            // 
+            this.tenDangNhapTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tAIKHOANBindingSource, "TenDangNhap", true));
+            this.tenDangNhapTextBox.Location = new System.Drawing.Point(105, 34);
+            this.tenDangNhapTextBox.Name = "tenDangNhapTextBox";
+            this.tenDangNhapTextBox.Size = new System.Drawing.Size(104, 20);
+            this.tenDangNhapTextBox.TabIndex = 3;
+            // 
+            // matKhauTextBox
+            // 
+            this.matKhauTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tAIKHOANBindingSource, "MatKhau", true));
+            this.matKhauTextBox.Location = new System.Drawing.Point(105, 60);
+            this.matKhauTextBox.Name = "matKhauTextBox";
+            this.matKhauTextBox.Size = new System.Drawing.Size(104, 20);
+            this.matKhauTextBox.TabIndex = 5;
+            // 
+            // hoatDongCheckBox
+            // 
+            this.hoatDongCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tAIKHOANBindingSource, "HoatDong", true));
+            this.hoatDongCheckBox.Location = new System.Drawing.Point(105, 86);
+            this.hoatDongCheckBox.Name = "hoatDongCheckBox";
+            this.hoatDongCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.hoatDongCheckBox.TabIndex = 7;
+            this.hoatDongCheckBox.Text = "checkBox1";
+            this.hoatDongCheckBox.UseVisualStyleBackColor = true;
             // 
             // tAIKHOANDataGridView
             // 
@@ -227,10 +280,10 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewCheckBoxColumn1});
             this.tAIKHOANDataGridView.DataSource = this.tAIKHOANBindingSource;
-            this.tAIKHOANDataGridView.Location = new System.Drawing.Point(12, 132);
+            this.tAIKHOANDataGridView.Location = new System.Drawing.Point(0, 174);
             this.tAIKHOANDataGridView.Name = "tAIKHOANDataGridView";
-            this.tAIKHOANDataGridView.Size = new System.Drawing.Size(358, 220);
-            this.tAIKHOANDataGridView.TabIndex = 1;
+            this.tAIKHOANDataGridView.Size = new System.Drawing.Size(378, 220);
+            this.tAIKHOANDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -250,71 +303,18 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "HoatDong";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
-            // tenDangNhapLabel
-            // 
-            tenDangNhapLabel.AutoSize = true;
-            tenDangNhapLabel.Location = new System.Drawing.Point(12, 37);
-            tenDangNhapLabel.Name = "tenDangNhapLabel";
-            tenDangNhapLabel.Size = new System.Drawing.Size(87, 13);
-            tenDangNhapLabel.TabIndex = 2;
-            tenDangNhapLabel.Text = "Ten Dang Nhap:";
-            // 
-            // tenDangNhapTextBox
-            // 
-            this.tenDangNhapTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tAIKHOANBindingSource, "TenDangNhap", true));
-            this.tenDangNhapTextBox.Location = new System.Drawing.Point(105, 34);
-            this.tenDangNhapTextBox.Name = "tenDangNhapTextBox";
-            this.tenDangNhapTextBox.Size = new System.Drawing.Size(104, 20);
-            this.tenDangNhapTextBox.TabIndex = 3;
-            // 
-            // matKhauLabel
-            // 
-            matKhauLabel.AutoSize = true;
-            matKhauLabel.Location = new System.Drawing.Point(12, 63);
-            matKhauLabel.Name = "matKhauLabel";
-            matKhauLabel.Size = new System.Drawing.Size(56, 13);
-            matKhauLabel.TabIndex = 4;
-            matKhauLabel.Text = "Mat Khau:";
-            // 
-            // matKhauTextBox
-            // 
-            this.matKhauTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tAIKHOANBindingSource, "MatKhau", true));
-            this.matKhauTextBox.Location = new System.Drawing.Point(105, 60);
-            this.matKhauTextBox.Name = "matKhauTextBox";
-            this.matKhauTextBox.Size = new System.Drawing.Size(104, 20);
-            this.matKhauTextBox.TabIndex = 5;
-            // 
-            // hoatDongLabel
-            // 
-            hoatDongLabel.AutoSize = true;
-            hoatDongLabel.Location = new System.Drawing.Point(12, 91);
-            hoatDongLabel.Name = "hoatDongLabel";
-            hoatDongLabel.Size = new System.Drawing.Size(62, 13);
-            hoatDongLabel.TabIndex = 6;
-            hoatDongLabel.Text = "Hoat Dong:";
-            // 
-            // hoatDongCheckBox
-            // 
-            this.hoatDongCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.tAIKHOANBindingSource, "HoatDong", true));
-            this.hoatDongCheckBox.Location = new System.Drawing.Point(105, 86);
-            this.hoatDongCheckBox.Name = "hoatDongCheckBox";
-            this.hoatDongCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.hoatDongCheckBox.TabIndex = 7;
-            this.hoatDongCheckBox.Text = "checkBox1";
-            this.hoatDongCheckBox.UseVisualStyleBackColor = true;
-            // 
             // ThemNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 372);
+            this.ClientSize = new System.Drawing.Size(390, 406);
+            this.Controls.Add(this.tAIKHOANDataGridView);
             this.Controls.Add(tenDangNhapLabel);
             this.Controls.Add(this.tenDangNhapTextBox);
             this.Controls.Add(matKhauLabel);
             this.Controls.Add(this.matKhauTextBox);
             this.Controls.Add(hoatDongLabel);
             this.Controls.Add(this.hoatDongCheckBox);
-            this.Controls.Add(this.tAIKHOANDataGridView);
             this.Controls.Add(this.tAIKHOANBindingNavigator);
             this.Name = "ThemNguoiDung";
             this.Text = "ThemNguoiDung";
@@ -349,12 +349,12 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton tAIKHOANBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox tenDangNhapTextBox;
+        private System.Windows.Forms.TextBox matKhauTextBox;
+        private System.Windows.Forms.CheckBox hoatDongCheckBox;
         private System.Windows.Forms.DataGridView tAIKHOANDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.TextBox tenDangNhapTextBox;
-        private System.Windows.Forms.TextBox matKhauTextBox;
-        private System.Windows.Forms.CheckBox hoatDongCheckBox;
     }
 }
