@@ -59,6 +59,12 @@ namespace QL_HocVien
 
         }
 
+        private void mônHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MonHoc frmND = new MonHoc();
+            frmND.Show();
+        }
+
         
     }
 }
