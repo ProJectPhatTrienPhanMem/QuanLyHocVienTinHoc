@@ -33,6 +33,7 @@
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmHọcSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mônHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.duLieu = new QL_HocVien.DuLieu();
             this.hOCVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOCVIENTableAdapter = new QL_HocVien.DuLieuTableAdapters.HOCVIENTableAdapter();
@@ -44,7 +45,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mônHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.khóaHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.duLieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOCVIENBindingSource)).BeginInit();
@@ -56,7 +57,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
             this.thêmHọcSinhToolStripMenuItem,
-            this.mônHọcToolStripMenuItem});
+            this.mônHọcToolStripMenuItem,
+            this.khóaHọcToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(650, 24);
@@ -84,6 +86,13 @@
             this.thêmHọcSinhToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.thêmHọcSinhToolStripMenuItem.Text = "Thêm Học Sinh";
             this.thêmHọcSinhToolStripMenuItem.Click += new System.EventHandler(this.thêmHọcSinhToolStripMenuItem_Click);
+            // 
+            // mônHọcToolStripMenuItem
+            // 
+            this.mônHọcToolStripMenuItem.Name = "mônHọcToolStripMenuItem";
+            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.mônHọcToolStripMenuItem.Text = "Môn Học";
+            this.mônHọcToolStripMenuItem.Click += new System.EventHandler(this.mônHọcToolStripMenuItem_Click);
             // 
             // duLieu
             // 
@@ -165,12 +174,12 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "DiaChi";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // mônHọcToolStripMenuItem
+            // khóaHọcToolStripMenuItem
             // 
-            this.mônHọcToolStripMenuItem.Name = "mônHọcToolStripMenuItem";
-            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.mônHọcToolStripMenuItem.Text = "Môn Học";
-            this.mônHọcToolStripMenuItem.Click += new System.EventHandler(this.mônHọcToolStripMenuItem_Click);
+            this.khóaHọcToolStripMenuItem.Name = "khóaHọcToolStripMenuItem";
+            this.khóaHọcToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.khóaHọcToolStripMenuItem.Text = "Khóa Học";
+            this.khóaHọcToolStripMenuItem.Click += new System.EventHandler(this.khóaHọcToolStripMenuItem_Click);
             // 
             // TrangChu
             // 
@@ -211,5 +220,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.ToolStripMenuItem mônHọcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem khóaHọcToolStripMenuItem;
     }
 }

@@ -65,6 +65,12 @@ namespace QL_HocVien
             frmND.Show();
         }
 
+        private void khóaHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KhoaHoc frmKH = new KhoaHoc();
+            frmKH.Show();
+        }
+
         
     }
 }
