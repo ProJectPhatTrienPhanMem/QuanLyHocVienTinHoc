@@ -36,6 +36,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnSua = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgrDSGV = new System.Windows.Forms.DataGridView();
             this.cboGioiTinh = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.mskPhone = new System.Windows.Forms.MaskedTextBox();
@@ -46,18 +47,19 @@
             this.txtMaGV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTime = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tblGIANGVIENBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.dgrDSGV = new System.Windows.Forms.DataGridView();
-            this.txtTime = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnLamMoi = new System.Windows.Forms.Button();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrDSGV)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblGIANGVIENBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrDSGV)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -130,6 +132,20 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
+            // 
+            // dgrDSGV
+            // 
+            this.dgrDSGV.AllowUserToAddRows = false;
+            this.dgrDSGV.AllowUserToDeleteRows = false;
+            this.dgrDSGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgrDSGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrDSGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgrDSGV.Location = new System.Drawing.Point(2, 15);
+            this.dgrDSGV.Name = "dgrDSGV";
+            this.dgrDSGV.ReadOnly = true;
+            this.dgrDSGV.Size = new System.Drawing.Size(470, 394);
+            this.dgrDSGV.TabIndex = 0;
+            this.dgrDSGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrDSGV_CellClick);
             // 
             // cboGioiTinh
             // 
@@ -213,6 +229,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtTime);
             this.groupBox1.Controls.Add(this.cboGioiTinh);
@@ -233,6 +251,23 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 247);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 15);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Ngày Sinh";
+            // 
+            // txtTime
+            // 
+            this.txtTime.Location = new System.Drawing.Point(99, 242);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(170, 20);
+            this.txtTime.TabIndex = 35;
             // 
             // label2
             // 
@@ -259,37 +294,6 @@
             // 
             this.tblGIANGVIENBindingSource3.DataMember = "tblGIANG_VIEN";
             // 
-            // dgrDSGV
-            // 
-            this.dgrDSGV.AllowUserToAddRows = false;
-            this.dgrDSGV.AllowUserToDeleteRows = false;
-            this.dgrDSGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgrDSGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrDSGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgrDSGV.Location = new System.Drawing.Point(2, 15);
-            this.dgrDSGV.Name = "dgrDSGV";
-            this.dgrDSGV.ReadOnly = true;
-            this.dgrDSGV.Size = new System.Drawing.Size(470, 394);
-            this.dgrDSGV.TabIndex = 0;
-            this.dgrDSGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrDSGV_CellClick);
-            // 
-            // txtTime
-            // 
-            this.txtTime.Location = new System.Drawing.Point(99, 242);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(170, 20);
-            this.txtTime.TabIndex = 35;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 247);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 15);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Ngày Sinh";
-            // 
             // btnLamMoi
             // 
             this.btnLamMoi.Location = new System.Drawing.Point(790, 100);
@@ -299,6 +303,23 @@
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(99, 279);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(170, 20);
+            this.txtDiaChi.TabIndex = 37;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(14, 284);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 15);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Địa Chỉ";
             // 
             // frmGiangVien
             // 
@@ -318,10 +339,10 @@
             this.Load += new System.EventHandler(this.frmGiangVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgrDSGV)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblGIANGVIENBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrDSGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +373,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker txtTime;
         private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtDiaChi;
     }
 }

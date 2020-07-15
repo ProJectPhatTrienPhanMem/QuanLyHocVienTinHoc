@@ -21,13 +21,17 @@ namespace QL_HocVien
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //giangvienblldal.ThemGiaoVien(txtMaGV.Text,txtHoTen.Text,cboGioiTinh.SelectedValue.ToString(),txtTime.Value,mskPhone.Text,txtEmail.Text,txtDiaChi.Text);
 
+            MessageBox.Show("Thêm Thành Công!! "+cboGioiTinh.SelectedValue.ToString());
+            dgrDSGV.DataSource = giangvienblldal.loadGiangVien();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        
 
         private void frmGiangVien_Load(object sender, EventArgs e)
         {
@@ -43,6 +47,7 @@ namespace QL_HocVien
             txtTime.Value = Convert.ToDateTime(dgrDSGV.CurrentRow.Cells[3].Value.ToString());
             mskPhone.Text = dgrDSGV.CurrentRow.Cells[4].Value.ToString();
             txtEmail.Text = dgrDSGV.CurrentRow.Cells[5].Value.ToString();
+            txtDiaChi.Text = dgrDSGV.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
