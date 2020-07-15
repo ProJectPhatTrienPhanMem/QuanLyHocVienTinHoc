@@ -38,6 +38,7 @@ namespace QL_HocVien
                 this.hệThốngToolStripMenuItem.Enabled = false;
 
             }
+           
         }
         private void thêmHọcSinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -69,6 +70,17 @@ namespace QL_HocVien
         {
             KhoaHoc frmKH = new KhoaHoc();
             frmKH.Show();
+        }
+
+        private void giảngViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGiangVien frmGV = new frmGiangVien();
+            frmGV.Show();
+        }
+
+        private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         

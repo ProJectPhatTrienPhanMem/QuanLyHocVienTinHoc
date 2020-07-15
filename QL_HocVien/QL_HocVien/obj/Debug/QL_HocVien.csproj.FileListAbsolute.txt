@@ -41,3 +41,6 @@ D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.XuLyCauHinh.re
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csproj.GenerateResource.Cache
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.MonHoc.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.KhoaHoc.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmGiangVien.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\BLL_DAL.dll
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\BLL_DAL.pdb

@@ -58,41 +58,41 @@ namespace QL_HocVien
             //    MessageBox.Show("Chuoi cau hinh khong phu hop");
             //    ProcessConfig();
             //}
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UPRR948\\SQLEXPRESS;Initial Catalog=QL_HOCVIEN;User ID=sa;Password=sa2012");
-            try
-            {
-                con.Open();
-                string selsql = "select * from TAIKHOAN where TenDangNhap='" + txtUser.Text + "' and MatKhau='" + txtPass.Text + "'";
-                SqlCommand cmd = new SqlCommand(selsql, con);
-                SqlDataReader read = cmd.ExecuteReader();
-                if (read.Read() == true)
-                {
-                    String temp;
-                    if (kiemtraQuyen(txtUser.Text))
-                    {
-                        temp = "admin";
-                        TrangChu menu = new TrangChu(temp);
-                        this.Hide();
-                        menu.Show();
-                    }
-                    else
-                    {
-                        temp = "user";
-                        TrangChu menu = new TrangChu(temp);
-                        this.Hide();
-                        menu.Show();
-                    }
+            //SqlConnection con = new SqlConnection("Data Source=DESKTOP-UPRR948\\SQLEXPRESS;Initial Catalog=QL_HOCVIEN;User ID=sa;Password=sa2012");
+            //try
+            //{
+            //    con.Open();
+            //    string selsql = "select * from TAIKHOAN where TenDangNhap='" + txtUser.Text + "' and MatKhau='" + txtPass.Text + "'";
+            //    SqlCommand cmd = new SqlCommand(selsql, con);
+            //    SqlDataReader read = cmd.ExecuteReader();
+            //    if (read.Read() == true)
+            //    {
+            //        String temp;
+            //        if (kiemtraQuyen(txtUser.Text))
+            //        {
+            //            temp = "admin";
+            //            TrangChu menu = new TrangChu(temp);
+            //            this.Hide();
+            //            menu.Show();
+            //        }
+            //        else
+            //        {
+            //            temp = "user";
+            //            TrangChu menu = new TrangChu(temp);
+            //            this.Hide();
+            //            menu.Show();
+            //        }
 
-                }
-                else
-                {
-                    MessageBox.Show("Tài khoảng hoặc mật khẩu không chính xác");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi kết nối");
-            }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Tài khoảng hoặc mật khẩu không chính xác");
+            //    }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Lỗi kết nối");
+            //}
         }
         //public void ProcessConfig()
         //{
@@ -158,6 +158,65 @@ namespace QL_HocVien
                 e.Cancel = true;
             }
             
+        }
+
+        private void txtTenDN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDN_Click_1(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UPRR948\\SQLEXPRESS;Initial Catalog=QL_HOCVIEN;User ID=sa;Password=sa2012");
+            try
+            {
+                con.Open();
+                string selsql = "select * from TAIKHOAN where TenDangNhap='" + txtUser.Text + "' and MatKhau='" + txtPass.Text + "'";
+                SqlCommand cmd = new SqlCommand(selsql, con);
+                SqlDataReader read = cmd.ExecuteReader();
+                if (read.Read() == true)
+                {
+                    String temp;
+                    if (kiemtraQuyen(txtUser.Text))
+                    {
+                        temp = "admin";
+                        TrangChu menu = new TrangChu(temp);
+                        this.Hide();
+                        menu.Show();
+                    }
+                    else
+                    {
+                        temp = "user";
+                        TrangChu menu = new TrangChu(temp);
+                        this.Hide();
+                        menu.Show();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoảng hoặc mật khẩu không chính xác");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi kết nối");
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

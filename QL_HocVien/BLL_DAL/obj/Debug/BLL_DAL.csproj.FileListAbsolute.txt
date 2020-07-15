@@ -1,0 +1,5 @@
+D:\QuanLyHocVienTinHoc\QL_HocVien\BLL_DAL\bin\Debug\BLL_DAL.dll
+D:\QuanLyHocVienTinHoc\QL_HocVien\BLL_DAL\bin\Debug\BLL_DAL.pdb
+D:\QuanLyHocVienTinHoc\QL_HocVien\BLL_DAL\obj\Debug\BLL_DAL.dll
+D:\QuanLyHocVienTinHoc\QL_HocVien\BLL_DAL\obj\Debug\BLL_DAL.pdb
+D:\QuanLyHocVienTinHoc\QL_HocVien\BLL_DAL\bin\Debug\BLL_DAL.dll.config
