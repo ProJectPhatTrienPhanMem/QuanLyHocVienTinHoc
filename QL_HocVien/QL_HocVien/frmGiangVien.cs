@@ -21,9 +21,9 @@ namespace QL_HocVien
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //giangvienblldal.ThemGiaoVien(txtMaGV.Text,txtHoTen.Text,cboGioiTinh.SelectedValue.ToString(),txtTime.Value,mskPhone.Text,txtEmail.Text,txtDiaChi.Text);
+            giangvienblldal.ThemGiaoVien(txtMaGV.Text, txtHoTen.Text, txtGioiTinh.Text, txtTime.Value, mskPhone.Text, txtEmail.Text, txtDiaChi.Text);
 
-            MessageBox.Show("Thêm Thành Công!! "+cboGioiTinh.SelectedValue.ToString());
+            MessageBox.Show("Thêm Thành Công!! ");
             dgrDSGV.DataSource = giangvienblldal.loadGiangVien();
         }
 
@@ -43,11 +43,12 @@ namespace QL_HocVien
            
             txtMaGV.Text = dgrDSGV.CurrentRow.Cells[0].Value.ToString();
             txtHoTen.Text = dgrDSGV.CurrentRow.Cells[1].Value.ToString();
-            cboGioiTinh.Text = dgrDSGV.CurrentRow.Cells[2].Value.ToString();
+            txtGioiTinh.Text = dgrDSGV.CurrentRow.Cells[2].Value.ToString();
             txtTime.Value = Convert.ToDateTime(dgrDSGV.CurrentRow.Cells[3].Value.ToString());
             mskPhone.Text = dgrDSGV.CurrentRow.Cells[4].Value.ToString();
             txtEmail.Text = dgrDSGV.CurrentRow.Cells[5].Value.ToString();
             txtDiaChi.Text = dgrDSGV.CurrentRow.Cells[6].Value.ToString();
+            txtMaGV.ReadOnly = true;
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
@@ -56,6 +57,24 @@ namespace QL_HocVien
             txtHoTen.Clear();
             mskPhone.Clear();          
             txtMaGV.Clear();
+            txtDiaChi.Clear();
+            txtGioiTinh.Clear();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            giangvienblldal.XoaGiaoVien(txtMaGV.Text);
+            MessageBox.Show("Xóa Thành Công!! ");
+            dgrDSGV.DataSource = giangvienblldal.loadGiangVien();
+            
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            giangvienblldal.SuaGiaoVien(txtMaGV.Text, txtHoTen.Text, txtGioiTinh.Text, txtTime.Value, mskPhone.Text, txtEmail.Text, txtDiaChi.Text);
+            MessageBox.Show("Sửa Thành Công!! ");
+            dgrDSGV.DataSource = giangvienblldal.loadGiangVien();
+
         }
     }
 }

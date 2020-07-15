@@ -31,6 +31,29 @@ namespace BLL_DAL
             qlhv.GiangViens.InsertOnSubmit(gv);
             qlhv.SubmitChanges();
         }
+        public void XoaGiaoVien(String magv)
+        {
+            GiangVien gvs = qlhv.GiangViens.Where(d => d.MaGV == magv).FirstOrDefault();
+            if (gvs != null)
+            {
 
+                qlhv.GiangViens.DeleteOnSubmit(gvs);
+                qlhv.SubmitChanges();
+            }
+        }
+        public void SuaGiaoVien(String magv, String tengv, String gioitinh, DateTime ngaysinh, String dienthoai, String email, String diachi)
+        {
+            GiangVien gvs = qlhv.GiangViens.Where(d => d.MaGV == magv).FirstOrDefault();
+            if (gvs != null)
+            {
+                gvs.TenGV = tengv;
+                gvs.GioiTinh = gioitinh;
+                gvs.NgaySinh = ngaysinh;
+                gvs.SoDienThoai = dienthoai;
+                gvs.Email = email;
+                gvs.DiaChi = diachi;
+                qlhv.SubmitChanges();
+            }
+        }
     }
 }

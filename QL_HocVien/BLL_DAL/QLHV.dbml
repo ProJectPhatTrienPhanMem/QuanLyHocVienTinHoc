@@ -44,7 +44,9 @@
       <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="DienThoai" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaLH" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Association Name="HOCVIEN_DANGKY" Member="DANGKies" ThisKey="MaHV" OtherKey="MaHV" Type="DANGKY" />
+      <Association Name="LOPHOC_HOCVIEN" Member="LOPHOC" ThisKey="MaLH" OtherKey="MaLH" Type="LOPHOC" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.KHOAHOC" Member="KHOAHOCs">
@@ -65,11 +67,10 @@
   </Table>
   <Table Name="dbo.LOPHOC" Member="LOPHOCs">
     <Type Name="LOPHOC">
-      <Column Name="MaLH" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaLH" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenLH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="SiSo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NgayBD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="NgayKT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="LOPHOC_HOCVIEN" Member="HOCVIENs" ThisKey="MaLH" OtherKey="MaLH" Type="HOCVIEN" />
     </Type>
   </Table>
   <Table Name="dbo.MONHOC" Member="MONHOCs">

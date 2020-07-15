@@ -34,7 +34,7 @@ namespace QL_HocVien
             dn.Visible = false;
             if (quyen.Equals("user"))
             {
-                this.thêmHọcSinhToolStripMenuItem.Enabled = false;
+                this.quảnLíToolStripMenuItem.Enabled = false;
                 this.hệThốngToolStripMenuItem.Enabled = false;
 
             }
@@ -42,8 +42,7 @@ namespace QL_HocVien
         }
         private void thêmHọcSinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HocVien frmHV = new HocVien();
-            frmHV.Show();
+            
         }
 
         private void thêmNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,8 +61,7 @@ namespace QL_HocVien
 
         private void mônHọcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MonHoc frmND = new MonHoc();
-            frmND.Show();
+            
         }
 
         private void khóaHọcToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,6 +79,24 @@ namespace QL_HocVien
         private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void mônHọcToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MonHoc frmND = new MonHoc();
+            frmND.Show();
+        }
+
+        private void sinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHocVien frmHV = new frmHocVien();
+            frmHV.Show();
+        }
+
+        private void lớpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLop frmLop = new frmLop();
+            frmLop.Show();
         }
 
         

@@ -846,7 +846,11 @@ namespace BLL_DAL
 		
 		private string _DiaChi;
 		
+		private string _MaLH;
+		
 		private EntitySet<DANGKY> _DANGKies;
+		
+		private EntityRef<LOPHOC> _LOPHOC;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -864,11 +868,14 @@ namespace BLL_DAL
     partial void OnDienThoaiChanged();
     partial void OnDiaChiChanging(string value);
     partial void OnDiaChiChanged();
+    partial void OnMaLHChanging(string value);
+    partial void OnMaLHChanged();
     #endregion
 		
 		public HOCVIEN()
 		{
 			this._DANGKies = new EntitySet<DANGKY>(new Action<DANGKY>(this.attach_DANGKies), new Action<DANGKY>(this.detach_DANGKies));
+			this._LOPHOC = default(EntityRef<LOPHOC>);
 			OnCreated();
 		}
 		
@@ -992,6 +999,30 @@ namespace BLL_DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLH", DbType="NChar(10)")]
+		public string MaLH
+		{
+			get
+			{
+				return this._MaLH;
+			}
+			set
+			{
+				if ((this._MaLH != value))
+				{
+					if (this._LOPHOC.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaLHChanging(value);
+					this.SendPropertyChanging();
+					this._MaLH = value;
+					this.SendPropertyChanged("MaLH");
+					this.OnMaLHChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="HOCVIEN_DANGKY", Storage="_DANGKies", ThisKey="MaHV", OtherKey="MaHV")]
 		public EntitySet<DANGKY> DANGKies
 		{
@@ -1002,6 +1033,40 @@ namespace BLL_DAL
 			set
 			{
 				this._DANGKies.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOPHOC_HOCVIEN", Storage="_LOPHOC", ThisKey="MaLH", OtherKey="MaLH", IsForeignKey=true)]
+		public LOPHOC LOPHOC
+		{
+			get
+			{
+				return this._LOPHOC.Entity;
+			}
+			set
+			{
+				LOPHOC previousValue = this._LOPHOC.Entity;
+				if (((previousValue != value) 
+							|| (this._LOPHOC.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._LOPHOC.Entity = null;
+						previousValue.HOCVIENs.Remove(this);
+					}
+					this._LOPHOC.Entity = value;
+					if ((value != null))
+					{
+						value.HOCVIENs.Add(this);
+						this._MaLH = value.MaLH;
+					}
+					else
+					{
+						this._MaLH = default(string);
+					}
+					this.SendPropertyChanged("LOPHOC");
+				}
 			}
 		}
 		
@@ -1322,9 +1387,7 @@ namespace BLL_DAL
 		
 		private System.Nullable<int> _SiSo;
 		
-		private System.Nullable<System.DateTime> _NgayBD;
-		
-		private System.Nullable<System.DateTime> _NgayKT;
+		private EntitySet<HOCVIEN> _HOCVIENs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1336,18 +1399,15 @@ namespace BLL_DAL
     partial void OnTenLHChanged();
     partial void OnSiSoChanging(System.Nullable<int> value);
     partial void OnSiSoChanged();
-    partial void OnNgayBDChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgayBDChanged();
-    partial void OnNgayKTChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgayKTChanged();
     #endregion
 		
 		public LOPHOC()
 		{
+			this._HOCVIENs = new EntitySet<HOCVIEN>(new Action<HOCVIEN>(this.attach_HOCVIENs), new Action<HOCVIEN>(this.detach_HOCVIENs));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLH", DbType="Char(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLH", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string MaLH
 		{
 			get
@@ -1407,43 +1467,16 @@ namespace BLL_DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayBD", DbType="Date")]
-		public System.Nullable<System.DateTime> NgayBD
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOPHOC_HOCVIEN", Storage="_HOCVIENs", ThisKey="MaLH", OtherKey="MaLH")]
+		public EntitySet<HOCVIEN> HOCVIENs
 		{
 			get
 			{
-				return this._NgayBD;
+				return this._HOCVIENs;
 			}
 			set
 			{
-				if ((this._NgayBD != value))
-				{
-					this.OnNgayBDChanging(value);
-					this.SendPropertyChanging();
-					this._NgayBD = value;
-					this.SendPropertyChanged("NgayBD");
-					this.OnNgayBDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayKT", DbType="Date")]
-		public System.Nullable<System.DateTime> NgayKT
-		{
-			get
-			{
-				return this._NgayKT;
-			}
-			set
-			{
-				if ((this._NgayKT != value))
-				{
-					this.OnNgayKTChanging(value);
-					this.SendPropertyChanging();
-					this._NgayKT = value;
-					this.SendPropertyChanged("NgayKT");
-					this.OnNgayKTChanged();
-				}
+				this._HOCVIENs.Assign(value);
 			}
 		}
 		
@@ -1465,6 +1498,18 @@ namespace BLL_DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_HOCVIENs(HOCVIEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.LOPHOC = this;
+		}
+		
+		private void detach_HOCVIENs(HOCVIEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.LOPHOC = null;
 		}
 	}
 	

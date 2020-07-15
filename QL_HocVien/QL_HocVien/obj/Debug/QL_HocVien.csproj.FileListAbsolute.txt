@@ -33,7 +33,6 @@ D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\FormControl.dll
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\FormControl.pdb
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csprojResolveAssemblyReference.cache
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.DangNhap.resources
-D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.HocVien.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.Properties.Resources.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.ThemNguoiDung.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.TrangChu.resources
@@ -44,3 +43,5 @@ D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.KhoaHoc.resour
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmGiangVien.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\BLL_DAL.dll
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\BLL_DAL.pdb
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmLop.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmHocVien.resources
