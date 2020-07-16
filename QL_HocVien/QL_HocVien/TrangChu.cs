@@ -29,7 +29,7 @@ namespace QL_HocVien
         private void TrangChu_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'duLieu.HOCVIEN' table. You can move, or remove it, as needed.
-            this.hOCVIENTableAdapter.Fill(this.duLieu.HOCVIEN);
+            //this.hOCVIENTableAdapter.Fill(this.duLieu.HOCVIEN);
             DangNhap dn = new DangNhap();
             dn.Visible = false;
             if (quyen.Equals("user"))
@@ -97,6 +97,17 @@ namespace QL_HocVien
         {
             frmLop frmLop = new frmLop();
             frmLop.Show();
+        }
+
+        private void btnHV_Click(object sender, EventArgs e)
+        {
+            frmHocVien frmSV = new frmHocVien();
+            frmSV.Show();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         

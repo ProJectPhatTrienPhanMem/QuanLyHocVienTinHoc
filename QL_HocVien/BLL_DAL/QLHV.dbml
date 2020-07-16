@@ -42,7 +42,7 @@
       <Column Name="TenHV" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="GioiTinh" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
       <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="DienThoai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="MaLH" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Association Name="HOCVIEN_DANGKY" Member="DANGKies" ThisKey="MaHV" OtherKey="MaHV" Type="DANGKY" />

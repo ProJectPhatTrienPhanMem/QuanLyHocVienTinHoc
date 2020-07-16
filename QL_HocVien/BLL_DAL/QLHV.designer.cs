@@ -842,7 +842,7 @@ namespace BLL_DAL
 		
 		private System.Nullable<System.DateTime> _NgaySinh;
 		
-		private System.Nullable<int> _DienThoai;
+		private string _DienThoai;
 		
 		private string _DiaChi;
 		
@@ -864,7 +864,7 @@ namespace BLL_DAL
     partial void OnGioiTinhChanged();
     partial void OnNgaySinhChanging(System.Nullable<System.DateTime> value);
     partial void OnNgaySinhChanged();
-    partial void OnDienThoaiChanging(System.Nullable<int> value);
+    partial void OnDienThoaiChanging(string value);
     partial void OnDienThoaiChanged();
     partial void OnDiaChiChanging(string value);
     partial void OnDiaChiChanged();
@@ -959,8 +959,8 @@ namespace BLL_DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DienThoai", DbType="Int")]
-		public System.Nullable<int> DienThoai
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DienThoai", DbType="NVarChar(50)")]
+		public string DienThoai
 		{
 			get
 			{

@@ -12,7 +12,6 @@ E:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.dll
 E:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.pdb
 D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\bin\Debug\FormControl.dll
 D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\bin\Debug\FormControl.pdb
-D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.csprojResolveAssemblyReference.cache
 D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.DangNhap.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.csproj.GenerateResource.Cache
 D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.dll

@@ -17,5 +17,10 @@ namespace BLL_DAL
             return qlhv.LOPHOCs.Select(k => k);
             
         }
+        public IQueryable<LOPHOC> loadMaLop()
+        {
+            return qlhv.LOPHOCs.Select(k => k);
+
+        }
     }
 }
