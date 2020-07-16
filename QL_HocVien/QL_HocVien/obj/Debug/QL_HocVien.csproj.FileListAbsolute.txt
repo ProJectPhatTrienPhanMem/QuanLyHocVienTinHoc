@@ -45,3 +45,5 @@ D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\BLL_DAL.dll
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\BLL_DAL.pdb
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmLop.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmHocVien.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmLoadSinhVien.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmLoadGiaoVien.resources

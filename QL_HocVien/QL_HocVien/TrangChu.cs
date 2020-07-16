@@ -36,6 +36,8 @@ namespace QL_HocVien
             {
                 this.quảnLíToolStripMenuItem.Enabled = false;
                 this.hệThốngToolStripMenuItem.Enabled = false;
+                this.danhMụcToolStripMenuItem.Enabled = false;
+                
 
             }
            
@@ -101,13 +103,25 @@ namespace QL_HocVien
 
         private void btnHV_Click(object sender, EventArgs e)
         {
-            frmHocVien frmSV = new frmHocVien();
+            frmLoadSinhVien frmSV = new frmLoadSinhVien();
             frmSV.Show();
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lớpHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLop frmLop = new frmLop();
+            frmLop.Show();
+        }
+
+        private void btnGV_Click(object sender, EventArgs e)
+        {
+            frmLoadGiaoVien frmGV = new frmLoadGiaoVien();
+            frmGV.Show();
         }
 
         
