@@ -104,7 +104,10 @@ namespace QL_HocVien
         private void btnHV_Click(object sender, EventArgs e)
         {
             frmLoadSinhVien frmSV = new frmLoadSinhVien();
-            frmSV.Show();
+            this.Hide();
+            frmSV.ShowDialog();
+            this.Show();
+            
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)

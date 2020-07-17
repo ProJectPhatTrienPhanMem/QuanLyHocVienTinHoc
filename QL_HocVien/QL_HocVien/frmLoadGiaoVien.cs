@@ -43,5 +43,10 @@ namespace QL_HocVien
             txtEmail.Text = dgrDSGV.CurrentRow.Cells[5].Value.ToString();
             txtDiaChi.Text = dgrDSGV.CurrentRow.Cells[6].Value.ToString();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
