@@ -22,5 +22,35 @@ namespace BLL_DAL
             return qlhv.LOPHOCs.Select(k => k);
 
         }
+        public void ThemLop(String malh, String tenlp, int sisio)
+        {
+            LOPHOC lh = new LOPHOC();
+            lh.MaLH = malh;
+            lh.TenLH = tenlp;
+            lh.SiSo = sisio;
+            qlhv.LOPHOCs.InsertOnSubmit(lh);
+            qlhv.SubmitChanges();
+        }
+        public void XoaLop(String malh)
+        {
+            LOPHOC lhs = qlhv.LOPHOCs.Where(d => d.MaLH == malh).FirstOrDefault();
+            if (lhs != null)
+            {
+
+                qlhv.LOPHOCs.DeleteOnSubmit(lhs);
+                qlhv.SubmitChanges();
+            }
+        }
+        public void SuaLop(String malh, String tenlp, int sisio)
+        {
+            LOPHOC lhs = qlhv.LOPHOCs.Where(d => d.MaLH == malh).FirstOrDefault();
+            if (lhs != null)
+            {
+                lhs.MaLH = malh;
+                lhs.TenLH = tenlp;
+                lhs.SiSo = sisio;
+                qlhv.SubmitChanges();
+            }
+        }
     }
 }

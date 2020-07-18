@@ -60,10 +60,10 @@
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(210, 107);
+            this.txtPass.Location = new System.Drawing.Point(169, 107);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(188, 22);
+            this.txtPass.Size = new System.Drawing.Size(229, 22);
             this.txtPass.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txtPass, "Tên đăng nhập phải bắt buộc");
             // 
@@ -82,9 +82,9 @@
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(210, 44);
+            this.txtUser.Location = new System.Drawing.Point(169, 44);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(188, 22);
+            this.txtUser.Size = new System.Drawing.Size(229, 22);
             this.txtUser.TabIndex = 1;
             this.toolTip1.SetToolTip(this.txtUser, "Tên đăng nhập phải bắt buộc");
             this.txtUser.TextChanged += new System.EventHandler(this.txtTenDN_TextChanged);
@@ -148,12 +148,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(631, 384);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnDN);
             this.Name = "DangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DangNhap_FormClosing);
             this.Load += new System.EventHandler(this.DangNhap_Load);

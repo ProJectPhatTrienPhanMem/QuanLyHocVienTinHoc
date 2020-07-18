@@ -30,306 +30,227 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLop));
-            System.Windows.Forms.Label maLHLabel;
-            System.Windows.Forms.Label tenLHLabel;
-            System.Windows.Forms.Label siSoLabel;
-            this.duLieu = new QL_HocVien.DuLieu();
-            this.lOPHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lOPHOCTableAdapter = new QL_HocVien.DuLieuTableAdapters.LOPHOCTableAdapter();
-            this.tableAdapterManager = new QL_HocVien.DuLieuTableAdapters.TableAdapterManager();
-            this.lOPHOCBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.lOPHOCBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.lOPHOCDataGridView = new System.Windows.Forms.DataGridView();
-            this.maLHTextBox = new System.Windows.Forms.TextBox();
-            this.tenLHTextBox = new System.Windows.Forms.TextBox();
-            this.siSoTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            maLHLabel = new System.Windows.Forms.Label();
-            tenLHLabel = new System.Windows.Forms.Label();
-            siSoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.duLieu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPHOCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPHOCBindingNavigator)).BeginInit();
-            this.lOPHOCBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPHOCDataGridView)).BeginInit();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
+            this.tblLOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtTenlop = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSiSo = new System.Windows.Forms.TextBox();
+            this.dgrLop = new System.Windows.Forms.DataGridView();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLOPBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrLop)).BeginInit();
             this.SuspendLayout();
             // 
-            // duLieu
+            // button4
             // 
-            this.duLieu.DataSetName = "DuLieu";
-            this.duLieu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(784, 284);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(92, 39);
+            this.button4.TabIndex = 30;
+            this.button4.Text = "Thoát ";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // lOPHOCBindingSource
+            // button3
             // 
-            this.lOPHOCBindingSource.DataMember = "LOPHOC";
-            this.lOPHOCBindingSource.DataSource = this.duLieu;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(784, 228);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(92, 39);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Xóa";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // lOPHOCTableAdapter
+            // button2
             // 
-            this.lOPHOCTableAdapter.ClearBeforeFill = true;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(784, 175);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 39);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Sửa";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // tableAdapterManager
+            // button1
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CAHOCTableAdapter = null;
-            this.tableAdapterManager.DANGKYTableAdapter = null;
-            this.tableAdapterManager.GiangVienTableAdapter = null;
-            this.tableAdapterManager.HOCVIENTableAdapter = null;
-            this.tableAdapterManager.KHOAHOCTableAdapter = null;
-            this.tableAdapterManager.KYTHITableAdapter = null;
-            this.tableAdapterManager.LOPHOCTableAdapter = this.lOPHOCTableAdapter;
-            this.tableAdapterManager.MONHOCTableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = QL_HocVien.DuLieuTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(784, 116);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 39);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Nhập";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lOPHOCBindingNavigator
+            // label1
             // 
-            this.lOPHOCBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.lOPHOCBindingNavigator.BindingSource = this.lOPHOCBindingSource;
-            this.lOPHOCBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.lOPHOCBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.lOPHOCBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.lOPHOCBindingNavigatorSaveItem});
-            this.lOPHOCBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.lOPHOCBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.lOPHOCBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.lOPHOCBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.lOPHOCBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.lOPHOCBindingNavigator.Name = "lOPHOCBindingNavigator";
-            this.lOPHOCBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lOPHOCBindingNavigator.Size = new System.Drawing.Size(380, 25);
-            this.lOPHOCBindingNavigator.TabIndex = 0;
-            this.lOPHOCBindingNavigator.Text = "bindingNavigator1";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(288, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 26);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "QUẢN LÝ LỚP";
             // 
-            // bindingNavigatorMoveFirstItem
+            // errorProvider1
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            this.errorProvider1.ContainerControl = this;
             // 
-            // bindingNavigatorMovePreviousItem
+            // label3
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(37, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Sĩ Số";
             // 
-            // bindingNavigatorSeparator
+            // txtMaLop
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.txtMaLop.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLop.Location = new System.Drawing.Point(128, 42);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Size = new System.Drawing.Size(208, 22);
+            this.txtMaLop.TabIndex = 1;
             // 
-            // bindingNavigatorPositionItem
+            // tblLOPBindingSource
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            this.tblLOPBindingSource.DataMember = "tblLOP";
             // 
-            // bindingNavigatorCountItem
+            // txtTenlop
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            this.txtTenlop.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenlop.Location = new System.Drawing.Point(128, 92);
+            this.txtTenlop.Name = "txtTenlop";
+            this.txtTenlop.Size = new System.Drawing.Size(208, 22);
+            this.txtTenlop.TabIndex = 2;
             // 
-            // bindingNavigatorSeparator1
+            // label4
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(37, 99);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 15);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Tên lớp";
             // 
-            // bindingNavigatorMoveNextItem
+            // label2
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mã lớp";
             // 
-            // bindingNavigatorMoveLastItem
+            // groupBox2
             // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            this.groupBox2.Controls.Add(this.dgrLop);
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(385, 43);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(393, 423);
+            this.groupBox2.TabIndex = 26;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách";
             // 
-            // bindingNavigatorSeparator2
+            // groupBox1
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.groupBox1.Controls.Add(this.txtSiSo);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtMaLop);
+            this.groupBox1.Controls.Add(this.txtTenlop);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(33, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(346, 423);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lựa chọn";
             // 
-            // bindingNavigatorAddNewItem
+            // txtSiSo
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.txtSiSo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSiSo.Location = new System.Drawing.Point(128, 149);
+            this.txtSiSo.Name = "txtSiSo";
+            this.txtSiSo.Size = new System.Drawing.Size(208, 22);
+            this.txtSiSo.TabIndex = 7;
             // 
-            // bindingNavigatorDeleteItem
+            // dgrLop
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.dgrLop.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgrLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrLop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgrLop.Location = new System.Drawing.Point(3, 18);
+            this.dgrLop.Name = "dgrLop";
+            this.dgrLop.Size = new System.Drawing.Size(387, 402);
+            this.dgrLop.TabIndex = 0;
             // 
-            // lOPHOCBindingNavigatorSaveItem
+            // btnLamMoi
             // 
-            this.lOPHOCBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.lOPHOCBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("lOPHOCBindingNavigatorSaveItem.Image")));
-            this.lOPHOCBindingNavigatorSaveItem.Name = "lOPHOCBindingNavigatorSaveItem";
-            this.lOPHOCBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.lOPHOCBindingNavigatorSaveItem.Text = "Save Data";
-            this.lOPHOCBindingNavigatorSaveItem.Click += new System.EventHandler(this.lOPHOCBindingNavigatorSaveItem_Click);
-            // 
-            // lOPHOCDataGridView
-            // 
-            this.lOPHOCDataGridView.AllowUserToAddRows = false;
-            this.lOPHOCDataGridView.AllowUserToDeleteRows = false;
-            this.lOPHOCDataGridView.AutoGenerateColumns = false;
-            this.lOPHOCDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lOPHOCDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.lOPHOCDataGridView.DataSource = this.lOPHOCBindingSource;
-            this.lOPHOCDataGridView.Location = new System.Drawing.Point(12, 117);
-            this.lOPHOCDataGridView.Name = "lOPHOCDataGridView";
-            this.lOPHOCDataGridView.ReadOnly = true;
-            this.lOPHOCDataGridView.Size = new System.Drawing.Size(348, 293);
-            this.lOPHOCDataGridView.TabIndex = 1;
-            // 
-            // maLHLabel
-            // 
-            maLHLabel.AutoSize = true;
-            maLHLabel.Location = new System.Drawing.Point(5, 31);
-            maLHLabel.Name = "maLHLabel";
-            maLHLabel.Size = new System.Drawing.Size(42, 13);
-            maLHLabel.TabIndex = 2;
-            maLHLabel.Text = "Ma LH:";
-            // 
-            // maLHTextBox
-            // 
-            this.maLHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPHOCBindingSource, "MaLH", true));
-            this.maLHTextBox.Location = new System.Drawing.Point(57, 28);
-            this.maLHTextBox.Name = "maLHTextBox";
-            this.maLHTextBox.Size = new System.Drawing.Size(303, 20);
-            this.maLHTextBox.TabIndex = 3;
-            // 
-            // tenLHLabel
-            // 
-            tenLHLabel.AutoSize = true;
-            tenLHLabel.Location = new System.Drawing.Point(5, 57);
-            tenLHLabel.Name = "tenLHLabel";
-            tenLHLabel.Size = new System.Drawing.Size(46, 13);
-            tenLHLabel.TabIndex = 4;
-            tenLHLabel.Text = "Ten LH:";
-            // 
-            // tenLHTextBox
-            // 
-            this.tenLHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPHOCBindingSource, "TenLH", true));
-            this.tenLHTextBox.Location = new System.Drawing.Point(57, 54);
-            this.tenLHTextBox.Name = "tenLHTextBox";
-            this.tenLHTextBox.Size = new System.Drawing.Size(303, 20);
-            this.tenLHTextBox.TabIndex = 5;
-            // 
-            // siSoLabel
-            // 
-            siSoLabel.AutoSize = true;
-            siSoLabel.Location = new System.Drawing.Point(5, 83);
-            siSoLabel.Name = "siSoLabel";
-            siSoLabel.Size = new System.Drawing.Size(35, 13);
-            siSoLabel.TabIndex = 6;
-            siSoLabel.Text = "Si So:";
-            // 
-            // siSoTextBox
-            // 
-            this.siSoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOPHOCBindingSource, "SiSo", true));
-            this.siSoTextBox.Location = new System.Drawing.Point(57, 80);
-            this.siSoTextBox.Name = "siSoTextBox";
-            this.siSoTextBox.Size = new System.Drawing.Size(303, 20);
-            this.siSoTextBox.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaLH";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Lớp";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenLH";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên Lớp";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SiSo";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Sĩ Số";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.Location = new System.Drawing.Point(784, 68);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(92, 39);
+            this.btnLamMoi.TabIndex = 31;
+            this.btnLamMoi.Text = "Làm Mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // frmLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 422);
-            this.Controls.Add(maLHLabel);
-            this.Controls.Add(this.maLHTextBox);
-            this.Controls.Add(tenLHLabel);
-            this.Controls.Add(this.tenLHTextBox);
-            this.Controls.Add(siSoLabel);
-            this.Controls.Add(this.siSoTextBox);
-            this.Controls.Add(this.lOPHOCDataGridView);
-            this.Controls.Add(this.lOPHOCBindingNavigator);
+            this.ClientSize = new System.Drawing.Size(908, 470);
+            this.Controls.Add(this.btnLamMoi);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmLop";
             this.Text = "frmLop";
             this.Load += new System.EventHandler(this.frmLop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.duLieu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPHOCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPHOCBindingNavigator)).EndInit();
-            this.lOPHOCBindingNavigator.ResumeLayout(false);
-            this.lOPHOCBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPHOCDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLOPBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrLop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,29 +258,23 @@
 
         #endregion
 
-        private DuLieu duLieu;
-        private System.Windows.Forms.BindingSource lOPHOCBindingSource;
-        private DuLieuTableAdapters.LOPHOCTableAdapter lOPHOCTableAdapter;
-        private DuLieuTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator lOPHOCBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton lOPHOCBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView lOPHOCDataGridView;
-        private System.Windows.Forms.TextBox maLHTextBox;
-        private System.Windows.Forms.TextBox tenLHTextBox;
-        private System.Windows.Forms.TextBox siSoTextBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.BindingSource tblLOPBindingSource;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtSiSo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtMaLop;
+        private System.Windows.Forms.TextBox txtTenlop;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgrLop;
+        private System.Windows.Forms.Button btnLamMoi;
+
     }
 }

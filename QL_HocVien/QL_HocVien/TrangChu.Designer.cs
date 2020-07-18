@@ -52,6 +52,7 @@
             this.btnGV = new System.Windows.Forms.Button();
             this.btnHV = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.duLieu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hOCVIENBindingSource)).BeginInit();
@@ -66,6 +67,7 @@
             this.hệThốngToolStripMenuItem,
             this.danhMụcToolStripMenuItem,
             this.quảnLíToolStripMenuItem,
+            this.trợGiúpToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -138,8 +140,8 @@
             // lớpHọcToolStripMenuItem
             // 
             this.lớpHọcToolStripMenuItem.Name = "lớpHọcToolStripMenuItem";
-            this.lớpHọcToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.lớpHọcToolStripMenuItem.Text = "Lớp Học";
+            this.lớpHọcToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lớpHọcToolStripMenuItem.Text = "Điểm";
             this.lớpHọcToolStripMenuItem.Click += new System.EventHandler(this.lớpHọcToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
@@ -170,6 +172,7 @@
             this.tableAdapterManager.DANGKYTableAdapter = null;
             this.tableAdapterManager.GiangVienTableAdapter = null;
             this.tableAdapterManager.HOCVIENTableAdapter = this.hOCVIENTableAdapter;
+            this.tableAdapterManager.KetQuaTableAdapter = null;
             this.tableAdapterManager.KHOAHOCTableAdapter = null;
             this.tableAdapterManager.KYTHITableAdapter = null;
             this.tableAdapterManager.LOPHOCTableAdapter = null;
@@ -225,24 +228,26 @@
             // 
             // btnGV
             // 
+            this.btnGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnGV.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnGV.Location = new System.Drawing.Point(3, 81);
             this.btnGV.Name = "btnGV";
             this.btnGV.Size = new System.Drawing.Size(102, 65);
             this.btnGV.TabIndex = 1;
             this.btnGV.Text = "Quản Lý Giáo Viên";
-            this.btnGV.UseVisualStyleBackColor = true;
+            this.btnGV.UseVisualStyleBackColor = false;
             this.btnGV.Click += new System.EventHandler(this.btnGV_Click);
             // 
             // btnHV
             // 
+            this.btnHV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnHV.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHV.Location = new System.Drawing.Point(3, 16);
             this.btnHV.Name = "btnHV";
             this.btnHV.Size = new System.Drawing.Size(102, 65);
             this.btnHV.TabIndex = 0;
             this.btnHV.Text = "Quản Lý Học Sinh";
-            this.btnHV.UseVisualStyleBackColor = true;
+            this.btnHV.UseVisualStyleBackColor = false;
             this.btnHV.Click += new System.EventHandler(this.btnHV_Click);
             // 
             // groupBox2
@@ -254,10 +259,18 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
+            // trợGiúpToolStripMenuItem
+            // 
+            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.trợGiúpToolStripMenuItem.Text = "Trợ Giúp";
+            this.trợGiúpToolStripMenuItem.Click += new System.EventHandler(this.trợGiúpToolStripMenuItem_Click);
+            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(787, 434);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -304,5 +317,6 @@
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.Button btnLop;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
     }
 }

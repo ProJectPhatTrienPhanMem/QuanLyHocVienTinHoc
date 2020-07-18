@@ -55,5 +55,12 @@ namespace BLL_DAL
                 qlhv.SubmitChanges();
             }
         }
+        public bool kiemTraKhoaChinh(string chuoi)
+        {
+            GiangVien gv = qlhv.GiangViens.Where(t => t.MaGV == chuoi).FirstOrDefault();
+            if (gv != null)
+                return false;
+            return true;
+        }
     }
 }

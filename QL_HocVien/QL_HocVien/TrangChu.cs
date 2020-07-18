@@ -68,8 +68,7 @@ namespace QL_HocVien
 
         private void khóaHọcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            KhoaHoc frmKH = new KhoaHoc();
-            frmKH.Show();
+           
         }
 
         private void giảngViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,8 +84,8 @@ namespace QL_HocVien
 
         private void mônHọcToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MonHoc frmND = new MonHoc();
-            frmND.Show();
+            frmMonHoc frmMH = new frmMonHoc();
+            frmMH.Show();
         }
 
         private void sinhViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,8 +96,8 @@ namespace QL_HocVien
 
         private void lớpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLop frmLop = new frmLop();
-            frmLop.Show();
+            frmLop frmL = new frmLop();
+            frmL.Show();
         }
 
         private void btnHV_Click(object sender, EventArgs e)
@@ -117,14 +116,19 @@ namespace QL_HocVien
 
         private void lớpHọcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLop frmLop = new frmLop();
-            frmLop.Show();
+           
         }
 
         private void btnGV_Click(object sender, EventArgs e)
         {
             frmLoadGiaoVien frmGV = new frmLoadGiaoVien();
             frmGV.Show();
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTroGiup frmTG = new frmTroGiup();
+            frmTG.Show();
         }
 
         

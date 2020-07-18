@@ -7,29 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BLL_DAL;
 namespace QL_HocVien
 {
     public partial class frmLop : Form
     {
+        LopBLLDAL lopblldal = new LopBLLDAL();
         public frmLop()
         {
             InitializeComponent();
         }
 
-        private void lOPHOCBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void frmLop_Load(object sender, EventArgs e)
         {
-            this.Validate();
-            this.lOPHOCBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.duLieu);
+            dgrLop.DataSource = lopblldal.loadLop();
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtMaLop.Clear();
+            txtSiSo.Clear();
+            txtTenlop.Clear();
 
         }
 
-        private void frmLop_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'duLieu.LOPHOC' table. You can move, or remove it, as needed.
-            this.lOPHOCTableAdapter.Fill(this.duLieu.LOPHOC);
+            
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            lopblldal.XoaLop(txtMaLop.Text);
+            dgrLop.DataSource = lopblldal.loadLop();
         }
     }
 }

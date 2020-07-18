@@ -14,16 +14,33 @@ namespace QL_HocVien
     {
         GiaoVienBLLDAL giangvienblldal = new GiaoVienBLLDAL();
         
+        
         public frmGiangVien()
         {
             InitializeComponent();
+            loadcbo();
+         
         }
+        public void loadcbo()
+        {
+            cboGioiTinh.DataSource = giangvienblldal.loadGiangVien();
+            cboGioiTinh.DisplayMember = "GioiTinh";
+            cboGioiTinh.ValueMember = "GioiTinh";
+        }
+    
 
         private void button1_Click(object sender, EventArgs e)
         {
-            giangvienblldal.ThemGiaoVien(txtMaGV.Text, txtHoTen.Text, txtGioiTinh.Text, txtTime.Value, mskPhone.Text, txtEmail.Text, txtDiaChi.Text);
-
-            MessageBox.Show("Thêm Thành Công!! ");
+            if (giangvienblldal.kiemTraKhoaChinh(txtMaGV.Text) == false)
+            {
+                MessageBox.Show("Đã Tồn Tại Giáo Viên Này!! ");
+                return;
+            }
+            else
+            {
+                    giangvienblldal.ThemGiaoVien(txtMaGV.Text, txtHoTen.Text, cboGioiTinh.SelectedValue.ToString(), txtTime.Value, mskPhone.Text, txtEmail.Text, txtDiaChi.Text);
+                    MessageBox.Show("Thêm Thành Công!! ");
+            }
             dgrDSGV.DataSource = giangvienblldal.loadGiangVien();
         }
 
@@ -43,7 +60,7 @@ namespace QL_HocVien
            
             txtMaGV.Text = dgrDSGV.CurrentRow.Cells[0].Value.ToString();
             txtHoTen.Text = dgrDSGV.CurrentRow.Cells[1].Value.ToString();
-            txtGioiTinh.Text = dgrDSGV.CurrentRow.Cells[2].Value.ToString();
+            cboGioiTinh.Text = dgrDSGV.CurrentRow.Cells[2].Value.ToString();
             txtTime.Value = Convert.ToDateTime(dgrDSGV.CurrentRow.Cells[3].Value.ToString());
             mskPhone.Text = dgrDSGV.CurrentRow.Cells[4].Value.ToString();
             txtEmail.Text = dgrDSGV.CurrentRow.Cells[5].Value.ToString();
@@ -58,7 +75,7 @@ namespace QL_HocVien
             mskPhone.Clear();          
             txtMaGV.Clear();
             txtDiaChi.Clear();
-            txtGioiTinh.Clear();
+            txtMaGV.ReadOnly = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -71,7 +88,7 @@ namespace QL_HocVien
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            giangvienblldal.SuaGiaoVien(txtMaGV.Text, txtHoTen.Text, txtGioiTinh.Text, txtTime.Value, mskPhone.Text, txtEmail.Text, txtDiaChi.Text);
+            giangvienblldal.SuaGiaoVien(txtMaGV.Text, txtHoTen.Text, cboGioiTinh.SelectedValue.ToString(), txtTime.Value, mskPhone.Text, txtEmail.Text, txtDiaChi.Text);
             MessageBox.Show("Sửa Thành Công!! ");
             dgrDSGV.DataSource = giangvienblldal.loadGiangVien();
 

@@ -38,12 +38,13 @@ D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.ThemNguoiDung.
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.TrangChu.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.XuLyCauHinh.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csproj.GenerateResource.Cache
-D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.MonHoc.resources
-D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.KhoaHoc.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmGiangVien.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\BLL_DAL.dll
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\BLL_DAL.pdb
-D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmLop.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmHocVien.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmLoadSinhVien.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmLoadGiaoVien.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmMonHoc.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmLop.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmKetQua.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmTroGiup.resources
