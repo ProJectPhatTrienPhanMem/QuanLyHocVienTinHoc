@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="GiaoVienBLLDAL.cs" />
     <Compile Include="HocVienBLLDAL.cs" />
+    <Compile Include="KetQuaBLLDAL.cs" />
     <Compile Include="LopBLLDAL.cs" />
     <Compile Include="MonHocBLLDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

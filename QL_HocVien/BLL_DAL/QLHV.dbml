@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_HOCVIEN" Class="QLHVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-UPRR948\SQLEXPRESS;Initial Catalog=QL_HOCVIEN;User ID=sa" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QL_HOCVIENConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
-    <Type Name="TAIKHOAN">
-      <Column Name="TenDangNhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="HoatDong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="quyen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.CAHOC" Member="CAHOCs">
     <Type Name="CAHOC">
       <Column Name="MaCH" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Buoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Gio" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONHOC" Member="MONHOCs">
+    <Type Name="MONHOC">
+      <Column Name="MaMH" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="MONHOC_KetQua" Member="KetQuas" ThisKey="MaMH" OtherKey="MaMH" Type="KetQua" />
+      <Association Name="GiangVien_MONHOC" Member="GiangVien" ThisKey="MaGV" OtherKey="MaGV" Type="GiangVien" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DANGKY" Member="DANGKies">
@@ -85,13 +86,12 @@
       <Association Name="LOPHOC_HOCVIEN" Member="HOCVIENs" ThisKey="MaLH" OtherKey="MaLH" Type="HOCVIEN" />
     </Type>
   </Table>
-  <Table Name="dbo.MONHOC" Member="MONHOCs">
-    <Type Name="MONHOC">
-      <Column Name="MaMH" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenMH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="MaGV" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Association Name="MONHOC_KetQua" Member="KetQuas" ThisKey="MaMH" OtherKey="MaMH" Type="KetQua" />
-      <Association Name="GiangVien_MONHOC" Member="GiangVien" ThisKey="MaGV" OtherKey="MaGV" Type="GiangVien" IsForeignKey="true" />
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="TenDangNhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoatDong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="quyen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
