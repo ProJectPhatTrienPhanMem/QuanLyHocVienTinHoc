@@ -33,18 +33,23 @@ namespace QL_HocVien
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            lopblldal.ThemLop(txtMaLop.Text, txtTenlop.Text, Int16.Parse(txtSiSo.Text));
+            MessageBox.Show("Thêm Thành Công");
+            dgrLop.DataSource = lopblldal.loadLop();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            lopblldal.SuaLop(txtMaLop.Text, txtTenlop.Text, Int16.Parse(txtSiSo.Text));
+            MessageBox.Show("Sửa Thành Công");
+            dgrLop.DataSource = lopblldal.loadLop();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             lopblldal.XoaLop(txtMaLop.Text);
+            MessageBox.Show("Xóa Thành Công");
             dgrLop.DataSource = lopblldal.loadLop();
         }
     }

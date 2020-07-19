@@ -45,5 +45,47 @@ namespace QL_HocVien
         {
             dataGridView1.DataSource = ketquablldal.loadKetQuaFull(cboMonHoc.SelectedValue.ToString());
         }
+
+        private void txtGhiChu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiemTK_TextChanged(object sender, EventArgs e)
+        {
+            double diemTK;
+        
+            if (txtDiemTK.Text == "")
+                this.txtDiemTK.Text = "0";
+            
+            diemTK = double.Parse(this.txtDiemTK.Text);
+            
+            if (diemTK <5)
+                this.txtGhiChu.Text = "Rớt rồi học lại nha :((";
+            else
+                this.txtGhiChu.Text = "Chúc mừng bạn đã đậu :)))";
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaSV.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            cboMonHoc.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtDiemTK.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtGhiChu.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ketquablldal.ThemKetQua(txtMaSV.Text, cboMonHoc.SelectedValue.ToString(), Double.Parse(txtDiemTK.Text), txtGhiChu.Text);
+            MessageBox.Show("Thêm Thành Công");
+            dataGridView1.DataSource = ketquablldal.loadKetQua();
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtGhiChu.Clear();
+            txtMaSV.Clear();
+            dataGridView1.DataSource = ketquablldal.loadKetQua();
+        }
     }
 }

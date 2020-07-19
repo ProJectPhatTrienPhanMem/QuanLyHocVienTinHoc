@@ -23,5 +23,37 @@ namespace BLL_DAL
             return qlhv.KetQuas.Where(l => l.MaMH == mamon).Select(k => k);
 
         }
+        public void ThemKetQua(String mahv, String mamh, double diem, String trangthai)
+        {
+            KetQua kq = new KetQua();
+            kq.MaHV = mahv;
+            kq.MaMH = mamh;
+            kq.Diem = diem;
+            kq.TrangThai = trangthai;
+            qlhv.KetQuas.InsertOnSubmit(kq);
+            qlhv.SubmitChanges();
+        }
+        public void XoaKetQua(String mahv)
+        {
+            KetQua kqs = qlhv.KetQuas.Where(d => d.MaHV == mahv).FirstOrDefault();
+            if (kqs != null)
+            {
+
+                qlhv.KetQuas.DeleteOnSubmit(kqs);
+                qlhv.SubmitChanges();
+            }
+        }
+        public void SuaKetQua(String mahv, String mamh, double diem, String trangthai)
+        {
+            KetQua kqs = qlhv.KetQuas.Where(d => d.MaHV == mahv).FirstOrDefault();
+            if (kqs != null)
+            {
+                kqs.MaHV = mahv;
+                kqs.MaMH = mamh;
+                kqs.Diem = diem;
+                kqs.TrangThai = trangthai;
+                qlhv.SubmitChanges();
+            }
+        }
     }
 }
