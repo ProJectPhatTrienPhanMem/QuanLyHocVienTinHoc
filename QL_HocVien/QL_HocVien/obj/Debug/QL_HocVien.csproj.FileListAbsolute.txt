@@ -31,7 +31,6 @@ D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\QL_HocVien.exe
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\QL_HocVien.pdb
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\FormControl.dll
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\FormControl.pdb
-D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csprojResolveAssemblyReference.cache
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.DangNhap.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.Properties.Resources.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.ThemNguoiDung.resources
@@ -48,3 +47,7 @@ D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmMonHoc.reso
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmLop.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmKetQua.resources
 D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.frmTroGiup.resources
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\bin\Debug\BLL_DAL.dll.config
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csprojAssemblyReference.cache
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csproj.CoreCompileInputs.cache
+D:\QuanLyHocVienTinHoc\QL_HocVien\QL_HocVien\obj\Debug\QL_HocVien.csproj.CopyComplete

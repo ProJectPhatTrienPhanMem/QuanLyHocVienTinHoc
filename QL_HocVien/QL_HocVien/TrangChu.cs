@@ -116,7 +116,8 @@ namespace QL_HocVien
 
         private void lớpHọcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            frmKetQua frmkq = new frmKetQua();
+            frmkq.Show();
         }
 
         private void btnGV_Click(object sender, EventArgs e)
@@ -129,6 +130,11 @@ namespace QL_HocVien
         {
             frmTroGiup frmTG = new frmTroGiup();
             frmTG.Show();
+        }
+
+        private void btnLop_Click(object sender, EventArgs e)
+        {
+
         }
 
         

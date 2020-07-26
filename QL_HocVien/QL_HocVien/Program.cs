@@ -19,7 +19,7 @@ namespace QL_HocVien
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmKetQua());
+            Application.Run(new DangNhap());
         }
     }
 }

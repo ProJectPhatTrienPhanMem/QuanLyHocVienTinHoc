@@ -41,7 +41,7 @@
             this.txtMaSV = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tblKETQUABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtDiemLan1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboMonHoc = new System.Windows.Forms.ComboBox();
@@ -55,6 +55,8 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnLamMoi = new System.Windows.Forms.Button();
+            this.txtDiemLan2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblKETQUABindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,6 +91,7 @@
             this.btnXoa.TabIndex = 20;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -101,6 +104,7 @@
             this.btnSua.TabIndex = 19;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // button1
             // 
@@ -117,9 +121,9 @@
             // 
             // txtDiemTK
             // 
-            this.txtDiemTK.Location = new System.Drawing.Point(601, 27);
+            this.txtDiemTK.Location = new System.Drawing.Point(307, 86);
             this.txtDiemTK.Name = "txtDiemTK";
-            this.txtDiemTK.Size = new System.Drawing.Size(141, 20);
+            this.txtDiemTK.Size = new System.Drawing.Size(150, 20);
             this.txtDiemTK.TabIndex = 11;
             this.txtDiemTK.TextChanged += new System.EventHandler(this.txtDiemTK_TextChanged);
             // 
@@ -134,11 +138,12 @@
             this.btnThoat.TabIndex = 21;
             this.btnThoat.Text = "Thoát ";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(522, 31);
+            this.label9.Location = new System.Drawing.Point(228, 89);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 13);
             this.label9.TabIndex = 14;
@@ -149,9 +154,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(228, 30);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Họ và tên";
+            this.label8.Text = "Điểm Lần 1";
             // 
             // txtMaSV
             // 
@@ -168,12 +173,13 @@
             // 
             this.tblKETQUABindingSource.DataMember = "tblKET_QUA";
             // 
-            // txtHoTen
+            // txtDiemLan1
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(316, 23);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(163, 20);
-            this.txtHoTen.TabIndex = 6;
+            this.txtDiemLan1.Location = new System.Drawing.Point(294, 23);
+            this.txtDiemLan1.Name = "txtDiemLan1";
+            this.txtDiemLan1.Size = new System.Drawing.Size(163, 20);
+            this.txtDiemLan1.TabIndex = 6;
+            this.txtDiemLan1.TextChanged += new System.EventHandler(this.txtDiemLan1_TextChanged);
             // 
             // label7
             // 
@@ -245,9 +251,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.txtDiemLan2);
             this.groupBox2.Controls.Add(this.txtDiemTK);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtHoTen);
+            this.groupBox2.Controls.Add(this.txtDiemLan1);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtMaSV);
             this.groupBox2.Controls.Add(this.label7);
@@ -291,6 +299,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(10, 19);
@@ -312,6 +322,23 @@
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // txtDiemLan2
+            // 
+            this.txtDiemLan2.Location = new System.Drawing.Point(573, 24);
+            this.txtDiemLan2.Name = "txtDiemLan2";
+            this.txtDiemLan2.Size = new System.Drawing.Size(163, 20);
+            this.txtDiemLan2.TabIndex = 15;
+            this.txtDiemLan2.TextChanged += new System.EventHandler(this.txtDiemLan2_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(506, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Điểm Lần 2";
             // 
             // frmKetQua
             // 
@@ -366,7 +393,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtDiemLan1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtGhiChu;
@@ -374,5 +401,7 @@
         private System.Windows.Forms.BindingSource tblKETQUABindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDiemLan2;
     }
 }

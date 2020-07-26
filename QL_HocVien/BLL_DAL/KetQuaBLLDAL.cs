@@ -23,12 +23,14 @@ namespace BLL_DAL
             return qlhv.KetQuas.Where(l => l.MaMH == mamon).Select(k => k);
 
         }
-        public void ThemKetQua(String mahv, String mamh, double diem, String trangthai)
+        public void ThemKetQua(String mahv, String mamh, double diemlan1, double diemlan2, double diemtb, String trangthai)
         {
             KetQua kq = new KetQua();
             kq.MaHV = mahv;
             kq.MaMH = mamh;
-            kq.Diem = diem;
+            kq.DiemLan1 = diemlan1;
+            kq.DiemLan2 = diemlan2;
+            kq.DiemTB = diemtb;
             kq.TrangThai = trangthai;
             qlhv.KetQuas.InsertOnSubmit(kq);
             qlhv.SubmitChanges();
@@ -43,14 +45,16 @@ namespace BLL_DAL
                 qlhv.SubmitChanges();
             }
         }
-        public void SuaKetQua(String mahv, String mamh, double diem, String trangthai)
+        public void SuaKetQua(String mahv, String mamh, double diemlan1, double diemlan2, double diemtb, String trangthai)
         {
             KetQua kqs = qlhv.KetQuas.Where(d => d.MaHV == mahv).FirstOrDefault();
             if (kqs != null)
             {
                 kqs.MaHV = mahv;
                 kqs.MaMH = mamh;
-                kqs.Diem = diem;
+                kqs.DiemLan1 = diemlan1;
+                kqs.DiemLan2 = diemlan2;
+                kqs.DiemTB = diemtb;
                 kqs.TrangThai = trangthai;
                 qlhv.SubmitChanges();
             }

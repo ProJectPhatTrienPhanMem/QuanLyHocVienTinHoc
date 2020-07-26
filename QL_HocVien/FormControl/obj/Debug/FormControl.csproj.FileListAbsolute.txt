@@ -16,3 +16,5 @@ D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.DangNhap.res
 D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.csproj.GenerateResource.Cache
 D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.dll
 D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.pdb
+D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.csprojAssemblyReference.cache
+D:\QuanLyHocVienTinHoc\QL_HocVien\FormControl\obj\Debug\FormControl.csproj.CoreCompileInputs.cache

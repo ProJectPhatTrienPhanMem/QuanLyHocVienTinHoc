@@ -7,13 +7,12 @@
       <Column Name="Gio" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.MONHOC" Member="MONHOCs">
-    <Type Name="MONHOC">
-      <Column Name="MaMH" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenMH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="MaGV" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Association Name="MONHOC_KetQua" Member="KetQuas" ThisKey="MaMH" OtherKey="MaMH" Type="KetQua" />
-      <Association Name="GiangVien_MONHOC" Member="GiangVien" ThisKey="MaGV" OtherKey="MaGV" Type="GiangVien" IsForeignKey="true" />
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="TenDangNhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoatDong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="quyen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.DANGKY" Member="DANGKies">
@@ -56,7 +55,9 @@
     <Type Name="KetQua">
       <Column Name="MaHV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaMH" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Diem" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemLan1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemLan2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiemTB" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="TrangThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="HOCVIEN_KetQua" Member="HOCVIEN" ThisKey="MaHV" OtherKey="MaHV" Type="HOCVIEN" IsForeignKey="true" />
       <Association Name="MONHOC_KetQua" Member="MONHOC" ThisKey="MaMH" OtherKey="MaMH" Type="MONHOC" IsForeignKey="true" />
@@ -86,12 +87,13 @@
       <Association Name="LOPHOC_HOCVIEN" Member="HOCVIENs" ThisKey="MaLH" OtherKey="MaLH" Type="HOCVIEN" />
     </Type>
   </Table>
-  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
-    <Type Name="TAIKHOAN">
-      <Column Name="TenDangNhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="HoatDong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="quyen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+  <Table Name="dbo.MONHOC" Member="MONHOCs">
+    <Type Name="MONHOC">
+      <Column Name="MaMH" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaGV" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="MONHOC_KetQua" Member="KetQuas" ThisKey="MaMH" OtherKey="MaMH" Type="KetQua" />
+      <Association Name="GiangVien_MONHOC" Member="GiangVien" ThisKey="MaGV" OtherKey="MaGV" Type="GiangVien" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

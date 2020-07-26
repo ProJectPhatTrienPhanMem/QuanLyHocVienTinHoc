@@ -25,8 +25,8 @@ namespace QL_HocVien
         private void frmKetQua_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = ketquablldal.loadKetQua();
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
         }
         public void loadMaLop()
         {
@@ -54,13 +54,13 @@ namespace QL_HocVien
         private void txtDiemTK_TextChanged(object sender, EventArgs e)
         {
             double diemTK;
-        
+
             if (txtDiemTK.Text == "")
                 this.txtDiemTK.Text = "0";
-            
+
             diemTK = double.Parse(this.txtDiemTK.Text);
-            
-            if (diemTK <5)
+
+            if (diemTK < 5)
                 this.txtGhiChu.Text = "Rớt rồi học lại nha :((";
             else
                 this.txtGhiChu.Text = "Chúc mừng bạn đã đậu :)))";
@@ -70,13 +70,15 @@ namespace QL_HocVien
         {
             txtMaSV.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             cboMonHoc.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtDiemTK.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtGhiChu.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtDiemLan1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtDiemLan2.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtDiemTK.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtGhiChu.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ketquablldal.ThemKetQua(txtMaSV.Text, cboMonHoc.SelectedValue.ToString(), Double.Parse(txtDiemTK.Text), txtGhiChu.Text);
+            ketquablldal.ThemKetQua(txtMaSV.Text, cboMonHoc.SelectedValue.ToString(), Double.Parse(txtDiemLan1.Text), Double.Parse(txtDiemLan2.Text), Double.Parse(txtDiemTK.Text), txtGhiChu.Text);
             MessageBox.Show("Thêm Thành Công");
             dataGridView1.DataSource = ketquablldal.loadKetQua();
         }
@@ -85,7 +87,114 @@ namespace QL_HocVien
         {
             txtGhiChu.Clear();
             txtMaSV.Clear();
+            txtDiemLan1.Clear();
+            txtDiemLan2.Clear();
+            txtDiemTK.Clear();
             dataGridView1.DataSource = ketquablldal.loadKetQua();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            ketquablldal.XoaKetQua(txtMaSV.Text);
+            MessageBox.Show("Xóa Thành Công");
+            dataGridView1.DataSource = ketquablldal.loadKetQua();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ketquablldal.SuaKetQua(txtMaSV.Text, cboMonHoc.SelectedValue.ToString(), Double.Parse(txtDiemLan1.Text), Double.Parse(txtDiemLan2.Text), Double.Parse(txtDiemTK.Text), txtGhiChu.Text);
+            MessageBox.Show("Sửa Thành Công");
+            dataGridView1.DataSource = ketquablldal.loadKetQua();
+
+        }
+
+        private void txtDiemLan1_TextChanged(object sender, EventArgs e)
+        {
+            double DIEMTHI, DIEMTB, DIEMTK;
+
+            if (txtDiemLan1.Text == "")
+            {
+                this.txtDiemLan1.Text = "0";
+                DIEMTB = double.Parse(this.txtDiemLan2.Text);
+
+                //Tính điểm TK
+                DIEMTK = (0.3 * DIEMTB + 0.7 * 0);
+                this.txtDiemTK.Text = Convert.ToString(DIEMTK);
+            }
+            else if (txtDiemLan2.Text == "")
+            {
+                this.txtDiemLan2.Text = "0";
+                DIEMTHI = double.Parse(this.txtDiemLan1.Text);
+
+                //Tính điểm TK
+                DIEMTK = (0.3 * 0 + 0.7 * DIEMTHI);
+                this.txtDiemTK.Text = Convert.ToString(DIEMTK);
+            }
+
+            else
+            {
+                DIEMTHI = double.Parse(this.txtDiemLan1.Text);
+                DIEMTB = double.Parse(this.txtDiemLan2.Text);
+                //Tính điểm TK
+                DIEMTK = (0.3 * DIEMTB + 0.7 * DIEMTHI);
+                this.txtDiemTK.Text = Convert.ToString(DIEMTK);
+            }
+            DIEMTK = double.Parse(this.txtDiemTK.Text);
+            if (DIEMTK < 5)
+            {
+                this.txtGhiChu.Text = "Thi lại";
+            }
+            else
+            {
+                this.txtGhiChu.Text = "Đã Đậu";
+            }
+        }
+
+        private void txtDiemLan2_TextChanged(object sender, EventArgs e)
+        {
+            double DIEMTHI, DIEMTB, DIEMTK;
+
+            if (txtDiemLan2.Text == "")
+            {
+                this.txtDiemLan2.Text = "0";
+                DIEMTHI = double.Parse(this.txtDiemLan1.Text);
+
+                //Tính điểm TK
+                DIEMTK = (0.3 * 0 + 0.7 * DIEMTHI);
+                this.txtDiemTK.Text = Convert.ToString(DIEMTK);
+            }
+            else if (txtDiemLan1.Text == "")
+            {
+                this.txtDiemLan1.Text = "0";
+                DIEMTB = double.Parse(this.txtDiemLan2.Text);
+
+                //Tính điểm TK
+                DIEMTK = (0.3 * DIEMTB + 0.7 * 0);
+                this.txtDiemTK.Text = Convert.ToString(DIEMTK);
+            }
+
+            else
+            {
+                DIEMTHI = double.Parse(this.txtDiemLan1.Text);
+                DIEMTB = double.Parse(this.txtDiemLan2.Text);
+                //Tính điểm TK
+                DIEMTK = (0.3 * DIEMTB + 0.7 * DIEMTHI);
+                this.txtDiemTK.Text = Convert.ToString(DIEMTK);
+            }
+            DIEMTK = double.Parse(this.txtDiemTK.Text);
+            if (DIEMTK < 5)
+            {
+                this.txtGhiChu.Text = "Thi lại";
+            }
+            else
+            {
+                this.txtGhiChu.Text = "Đã Đậu";
+            }
         }
     }
 }
