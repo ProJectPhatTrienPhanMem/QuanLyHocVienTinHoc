@@ -57,7 +57,7 @@ namespace QL_HocVien
 
         private void dgrDSGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+           //hello
             txtMaGV.Text = dgrDSGV.CurrentRow.Cells[0].Value.ToString();
             txtHoTen.Text = dgrDSGV.CurrentRow.Cells[1].Value.ToString();
             cboGioiTinh.Text = dgrDSGV.CurrentRow.Cells[2].Value.ToString();
