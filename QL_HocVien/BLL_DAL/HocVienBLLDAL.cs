@@ -23,6 +23,7 @@ namespace BLL_DAL
             return qlhv.HOCVIENs.Where(l => l.MaLH == malop).Select(k => k);
 
         }
+      
         public void ThemHocVien(String mahv, String tenhv, String gioitinh, DateTime ngaysinh, String dienthoai, String diachi, String malh)
         {
             HOCVIEN hv = new HOCVIEN();

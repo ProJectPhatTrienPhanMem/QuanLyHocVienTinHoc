@@ -34,26 +34,26 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.tblMONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgrMON = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.drgMonHoc = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTenMon = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaMon = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboGV = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.drgMonHoc = new System.Windows.Forms.DataGridView();
-            this.cboGV = new System.Windows.Forms.ComboBox();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.tblMONBindingSource)).BeginInit();
+            this.tblMONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgrMON)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.drgMonHoc)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drgMonHoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMONBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -109,10 +109,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tblMONBindingSource
-            // 
-            this.tblMONBindingSource.DataMember = "tblMON";
-            // 
             // dgrMON
             // 
             this.dgrMON.AutoGenerateColumns = false;
@@ -135,10 +131,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
             // 
+            // drgMonHoc
+            // 
+            this.drgMonHoc.AllowUserToAddRows = false;
+            this.drgMonHoc.AllowUserToDeleteRows = false;
+            this.drgMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.drgMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.drgMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.drgMonHoc.GridColor = System.Drawing.SystemColors.Control;
+            this.drgMonHoc.Location = new System.Drawing.Point(3, 16);
+            this.drgMonHoc.Name = "drgMonHoc";
+            this.drgMonHoc.ReadOnly = true;
+            this.drgMonHoc.Size = new System.Drawing.Size(461, 376);
+            this.drgMonHoc.TabIndex = 1;
+            this.drgMonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drgMonHoc_CellClick);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 111);
+            this.label4.Location = new System.Drawing.Point(21, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 15);
             this.label4.TabIndex = 18;
@@ -194,6 +205,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
             // 
+            // cboGV
+            // 
+            this.cboGV.FormattingEnabled = true;
+            this.cboGV.Location = new System.Drawing.Point(106, 111);
+            this.cboGV.Name = "cboGV";
+            this.cboGV.Size = new System.Drawing.Size(145, 23);
+            this.cboGV.TabIndex = 19;
+            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -209,29 +228,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Danh sách môn học";
             // 
-            // drgMonHoc
-            // 
-            this.drgMonHoc.AllowUserToAddRows = false;
-            this.drgMonHoc.AllowUserToDeleteRows = false;
-            this.drgMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.drgMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.drgMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.drgMonHoc.GridColor = System.Drawing.SystemColors.Control;
-            this.drgMonHoc.Location = new System.Drawing.Point(3, 16);
-            this.drgMonHoc.Name = "drgMonHoc";
-            this.drgMonHoc.ReadOnly = true;
-            this.drgMonHoc.Size = new System.Drawing.Size(461, 376);
-            this.drgMonHoc.TabIndex = 1;
-            this.drgMonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drgMonHoc_CellClick);
-            // 
-            // cboGV
-            // 
-            this.cboGV.FormattingEnabled = true;
-            this.cboGV.Location = new System.Drawing.Point(106, 104);
-            this.cboGV.Name = "cboGV";
-            this.cboGV.Size = new System.Drawing.Size(145, 23);
-            this.cboGV.TabIndex = 19;
-            // 
             // btnLamMoi
             // 
             this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,6 +240,10 @@
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // tblMONBindingSource
+            // 
+            this.tblMONBindingSource.DataMember = "tblMON";
             // 
             // frmMonHoc
             // 
@@ -261,13 +261,13 @@
             this.Name = "frmMonHoc";
             this.Text = "frmMonHoc";
             this.Load += new System.EventHandler(this.frmMonHoc_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tblMONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrMON)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.drgMonHoc)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drgMonHoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMONBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

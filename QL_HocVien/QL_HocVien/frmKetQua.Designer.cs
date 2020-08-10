@@ -40,7 +40,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtMaSV = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tblKETQUABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtDiemLan1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,20 +49,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDiemLan2 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tblKETQUABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.txtDiemLan2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblKETQUABindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblKETQUABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnXuat
@@ -169,10 +169,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // tblKETQUABindingSource
-            // 
-            this.tblKETQUABindingSource.DataMember = "tblKET_QUA";
-            // 
             // txtDiemLan1
             // 
             this.txtDiemLan1.Location = new System.Drawing.Point(294, 23);
@@ -266,6 +262,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(506, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Điểm Lần 2";
+            // 
+            // txtDiemLan2
+            // 
+            this.txtDiemLan2.Location = new System.Drawing.Point(573, 24);
+            this.txtDiemLan2.Name = "txtDiemLan2";
+            this.txtDiemLan2.Size = new System.Drawing.Size(163, 20);
+            this.txtDiemLan2.TabIndex = 15;
+            this.txtDiemLan2.TextChanged += new System.EventHandler(this.txtDiemLan2_TextChanged);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtGhiChu);
@@ -310,35 +323,21 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // tblKETQUABindingSource
+            // 
+            this.tblKETQUABindingSource.DataMember = "tblKET_QUA";
+            // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLamMoi.Location = new System.Drawing.Point(825, 107);
+            this.btnLamMoi.Location = new System.Drawing.Point(825, 109);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(92, 39);
+            this.btnLamMoi.Size = new System.Drawing.Size(92, 37);
             this.btnLamMoi.TabIndex = 23;
-            this.btnLamMoi.Text = "Làm Mới";
+            this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // txtDiemLan2
-            // 
-            this.txtDiemLan2.Location = new System.Drawing.Point(573, 24);
-            this.txtDiemLan2.Name = "txtDiemLan2";
-            this.txtDiemLan2.Size = new System.Drawing.Size(163, 20);
-            this.txtDiemLan2.TabIndex = 15;
-            this.txtDiemLan2.TextChanged += new System.EventHandler(this.txtDiemLan2_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(506, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Điểm Lần 2";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click_1);
             // 
             // frmKetQua
             // 
@@ -360,7 +359,6 @@
             this.Text = "frmKetQua";
             this.Load += new System.EventHandler(this.frmKetQua_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblKETQUABindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -369,6 +367,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblKETQUABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,8 +399,8 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.BindingSource tblKETQUABindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDiemLan2;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }

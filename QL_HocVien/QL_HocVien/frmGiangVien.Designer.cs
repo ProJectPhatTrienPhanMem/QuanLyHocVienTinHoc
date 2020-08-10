@@ -46,6 +46,7 @@
             this.txtMaGV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboGioiTinh = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tblGIANGVIENBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.cboGioiTinh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrDSGV)).BeginInit();
@@ -68,7 +68,7 @@
             this.btnThoat.ForeColor = System.Drawing.Color.Black;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(789, 364);
+            this.btnThoat.Location = new System.Drawing.Point(789, 320);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(92, 39);
             this.btnThoat.TabIndex = 19;
@@ -83,7 +83,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(789, 280);
+            this.btnXoa.Location = new System.Drawing.Point(789, 261);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(92, 39);
             this.btnXoa.TabIndex = 18;
@@ -115,7 +115,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(789, 219);
+            this.btnSua.Location = new System.Drawing.Point(789, 203);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 39);
             this.btnSua.TabIndex = 17;
@@ -137,8 +137,7 @@
             // 
             // dgrDSGV
             // 
-            this.dgrDSGV.AllowUserToAddRows = false;
-            this.dgrDSGV.AllowUserToDeleteRows = false;
+            this.dgrDSGV.AllowUserToOrderColumns = true;
             this.dgrDSGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgrDSGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrDSGV.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -243,6 +242,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
             // 
+            // cboGioiTinh
+            // 
+            this.cboGioiTinh.FormattingEnabled = true;
+            this.cboGioiTinh.Location = new System.Drawing.Point(99, 111);
+            this.cboGioiTinh.Name = "cboGioiTinh";
+            this.cboGioiTinh.Size = new System.Drawing.Size(170, 21);
+            this.cboGioiTinh.TabIndex = 39;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -304,21 +311,15 @@
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(790, 100);
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.Location = new System.Drawing.Point(789, 103);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(91, 40);
+            this.btnLamMoi.Size = new System.Drawing.Size(92, 37);
             this.btnLamMoi.TabIndex = 20;
-            this.btnLamMoi.Text = "Làm Mới";
+            this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // cboGioiTinh
-            // 
-            this.cboGioiTinh.FormattingEnabled = true;
-            this.cboGioiTinh.Location = new System.Drawing.Point(99, 111);
-            this.cboGioiTinh.Name = "cboGioiTinh";
-            this.cboGioiTinh.Size = new System.Drawing.Size(170, 21);
-            this.cboGioiTinh.TabIndex = 39;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click_1);
             // 
             // frmGiangVien
             // 
@@ -370,9 +371,9 @@
         private System.Windows.Forms.DataGridView dgrDSGV;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker txtTime;
-        private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.ComboBox cboGioiTinh;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }

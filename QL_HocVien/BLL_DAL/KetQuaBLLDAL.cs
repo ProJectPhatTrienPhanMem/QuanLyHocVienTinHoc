@@ -23,6 +23,11 @@ namespace BLL_DAL
             return qlhv.KetQuas.Where(l => l.MaMH == mamon).Select(k => k);
 
         }
+        public IQueryable<KetQua> loadKetQuaFull2(String masv,String mamon)
+        {
+            return qlhv.KetQuas.Where(l => l.MaHV == masv && l.MaMH == mamon).Select(k => k);
+
+        }
         public void ThemKetQua(String mahv, String mamh, double diemlan1, double diemlan2, double diemtb, String trangthai)
         {
             KetQua kq = new KetQua();

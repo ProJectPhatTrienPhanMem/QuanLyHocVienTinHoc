@@ -56,8 +56,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bntLamMoi = new System.Windows.Forms.Button();
             this.tblSINHVIENBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -135,7 +135,7 @@
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(827, 344);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(78, 35);
+            this.btnThoat.Size = new System.Drawing.Size(106, 35);
             this.btnThoat.TabIndex = 27;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.Location = new System.Drawing.Point(827, 286);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(78, 35);
+            this.btnXoa.Size = new System.Drawing.Size(106, 35);
             this.btnXoa.TabIndex = 26;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -161,7 +161,7 @@
             this.btnThemmoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThemmoi.Location = new System.Drawing.Point(827, 185);
             this.btnThemmoi.Name = "btnThemmoi";
-            this.btnThemmoi.Size = new System.Drawing.Size(78, 35);
+            this.btnThemmoi.Size = new System.Drawing.Size(106, 35);
             this.btnThemmoi.TabIndex = 24;
             this.btnThemmoi.Text = "Thêm mới";
             this.btnThemmoi.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.Location = new System.Drawing.Point(827, 235);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(78, 35);
+            this.btnSua.Size = new System.Drawing.Size(106, 35);
             this.btnSua.TabIndex = 25;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -331,29 +331,27 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Mã Sinh Viên";
             // 
-            // bntLamMoi
-            // 
-            this.bntLamMoi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("bntLamMoi.Image")));
-            this.bntLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntLamMoi.Location = new System.Drawing.Point(827, 128);
-            this.bntLamMoi.Name = "bntLamMoi";
-            this.bntLamMoi.Size = new System.Drawing.Size(78, 35);
-            this.bntLamMoi.TabIndex = 29;
-            this.bntLamMoi.Text = "Làm mới";
-            this.bntLamMoi.UseVisualStyleBackColor = true;
-            this.bntLamMoi.Click += new System.EventHandler(this.bntLamMoi_Click);
-            // 
             // tblSINHVIENBindingSource8
             // 
             this.tblSINHVIENBindingSource8.DataMember = "tblSINH_VIEN";
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.Location = new System.Drawing.Point(827, 128);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(106, 37);
+            this.btnLamMoi.TabIndex = 29;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
             // 
             // frmHocVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 522);
-            this.Controls.Add(this.bntLamMoi);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnXoa);
@@ -403,11 +401,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView drgHocVien;
-        private System.Windows.Forms.Button bntLamMoi;
         private System.Windows.Forms.DateTimePicker txtDay;
         private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.MaskedTextBox mskPhone;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnLamMoi;
 
     }
 }

@@ -93,5 +93,16 @@ namespace QL_HocVien
             dgrDSGV.DataSource = giangvienblldal.loadGiangVien();
 
         }
+
+        private void btnLamMoi_Click_1(object sender, EventArgs e)
+        {
+
+            txtEmail.Clear();
+            txtHoTen.Clear();
+            mskPhone.Clear();
+            txtMaGV.Clear();
+            txtDiaChi.Clear();
+            txtMaGV.ReadOnly = false;
+        }
     }
 }

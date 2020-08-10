@@ -196,5 +196,15 @@ namespace QL_HocVien
                 this.txtGhiChu.Text = "Đã Đậu";
             }
         }
+
+        private void btnLamMoi_Click_1(object sender, EventArgs e)
+        {
+            txtGhiChu.Clear();
+            txtMaSV.Clear();
+            txtDiemLan1.Clear();
+            txtDiemLan2.Clear();
+            txtDiemTK.Clear();
+            dataGridView1.DataSource = ketquablldal.loadKetQua();
+        }
     }
 }
